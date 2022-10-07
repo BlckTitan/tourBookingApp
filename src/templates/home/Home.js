@@ -2,12 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //styled components
 import { Container } from './style/Homestyle';
+import Accomodation from '../../organisms/accomodation/Accomodation';
 //icons
-import BedroomParentOutlinedIcon from '@mui/icons-material/BedroomParentOutlined';
-import RowingIcon from '@mui/icons-material/Rowing';
-import AttractionsIcon from '@mui/icons-material/Attractions';
-import CarRentalIcon from '@mui/icons-material/CarRental';
-import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -17,69 +13,12 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 export default function Home() {
   return (
     <Container>
-      <div className='bookBG'>
-        <img src='https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80'/>
-        <form>
-          <div className='country'>
-            <label htmlFor='country'>Destination, zone or hotel name</label>
-            <input type="text" id='country'/>
-          </div>
-
-         <div className='duration'>
-          <label htmlFor="forDate">
-            From
-            <input type="date" id='forDate'/>
-          </label>
-          <label htmlFor='toDate'>
-            To
-            <input type="date" id='toDate'/>
-          </label>
-          <label>
-            Nghts
-            <select>
-              <option>1</option>
-              <option>2</option>
-            </select>
-          </label>
-         </div>
-
-         <div className='accomodation'>
-           <label>
-              Rooms
-              <select>
-                <option>1</option>
-                <option>2</option>
-              </select>
-            </label>
-            <label>
-              Adults
-              <select>
-                <option>1</option>
-                <option>2</option>
-              </select>
-            </label>
-            <label>
-              Children
-              <select>
-                <option>1</option>
-                <option>2</option>
-              </select>
-            </label>
-         </div>
-
-         <div className='search'>
-          <button>Search</button>
-         </div>
-        </form>
-      </div>
-      <div className='navigation'>
-        <ul className='secondaryNav'>
-          <li><Link to="/#"><BedroomParentOutlinedIcon className='icon'/>Accomodation</Link></li>
-          <li><Link to="/#"><RowingIcon className='icon'/>Activities</Link></li>
-          <li><Link to="/#" className='text'><AttractionsIcon className='icon'/>Theme parks</Link></li>
-          <li><Link to="/#"><AirportShuttleIcon className='icon'/>Transfers</Link></li>
-          <li><Link to="/#"><CarRentalIcon className='icon'/>Car rental</Link></li>
-        </ul>
+      <Accomodation/>
+      <div className='body'>
+        <div>
+          Enjoy a well deserved vacation trip
+        </div>
+        <div></div>
       </div>
       <footer>
         <div className='siteTitle'>WLBT</div>
@@ -102,3 +41,10 @@ export default function Home() {
     </Container>
   )
 }
+/**
+ * https://images.unsplash.com/photo-1500301111609-42f1aa6df72a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
+ * https://images.unsplash.com/photo-1523225918988-00624e6d8fee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2011&q=80
+ * https://images.unsplash.com/photo-1517258922744-606330ad6639?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
+ * https://images.unsplash.com/photo-1633503640089-9e31cbb0d6cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80
+ * https://images.unsplash.com/photo-1585870463953-cef577799a70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80
+ */
