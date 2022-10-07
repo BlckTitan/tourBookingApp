@@ -1,14 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-//styled components
+//organism
 import { Container } from './style/Homestyle';
 import Accomodation from '../../organisms/accomodation/Accomodation';
-//icons
-import InstagramIcon from '@mui/icons-material/Instagram';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import PinterestIcon from '@mui/icons-material/Pinterest';
+import Footer from '../../organisms/footer/Footer';
 
 export default function Home() {
   return (
@@ -20,24 +14,7 @@ export default function Home() {
         </div>
         <div></div>
       </div>
-      <footer>
-        <div className='siteTitle'>WLBT</div>
-        <div className='otherInfo'>
-          <div className='socials'>
-            <Link to="/#"><InstagramIcon className='icon'/></Link>
-            <Link to="/#"><FacebookOutlinedIcon className='icon'/></Link>
-            <Link to="/#"><TwitterIcon className='icon'/></Link>
-            <Link to="/#"><PinterestIcon className='icon'/></Link>
-            <Link to="/#"><WhatsAppIcon className='icon'/></Link>
-          </div>
-          <div className='info'>
-            <Link to="/#">Home</Link>
-            <Link to="/#">About Us</Link>
-            <Link to="/#">Terms and Conditions</Link>
-            <Link to="/#">Booking</Link>
-          </div>
-        </div>
-      </footer>
+     <Footer/>
     </Container>
   )
 }
