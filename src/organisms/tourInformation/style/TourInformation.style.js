@@ -1,37 +1,30 @@
 import Styled from "styled-components";
-export const AccomodationStyle = Styled.div`
+export const TourInformationStyle = Styled.div`
     display: flex;
     justify-content: start;
     align-items: center;
     width: 100%;
     height: 700px;
     position: relative;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        z-index: 0;
-    }
+    
     & form{
         position: absolute;
         left: 3rem; 
         width: 800px;
-        height: 400px;
+        height: 550px;
         border-radius: .3rem;
         padding: 1.5rem 2rem;
         background: rgba(255, 255, 255, .6);
         color: #272726;
         font-size: 1rem;
-        input, select{
+        input, select, span{
             margin-top: 0.5rem;
             height: 2.5rem;
             border-radius: 0.3rem;
             border: 0.3px solid #0077a3;
             padding: 0.5rem;
             font-size: 1.2rem;
-            color: gray;
+            color: #272726;
         }
         div{
             margin-bottom: 1rem;
@@ -45,7 +38,7 @@ export const AccomodationStyle = Styled.div`
         & div.country{
             display: flex;
             flex-direction: column;
-            input{
+            select{
                 width: 400px;
             }
 
@@ -56,9 +49,21 @@ export const AccomodationStyle = Styled.div`
                 input{
                     width: 10rem;
                 }
+                span{
+                    width: 3rem;
+                    height: 2.5rem;
+                    margin-top: 0.5rem;
+                    border-radius: 0.3rem;
+                    border: 1px solid #0077a3;
+                    background-color: #fff;
+                    text-align: center;
+                    line-height: 1.5rem;
+                    color: #272726;
+                }
             }
         }
-        & div.accomodation{
+        & div.accomodation,
+          div.tourTransfer{
             display: flex;
         }
         div.search{
@@ -73,6 +78,9 @@ export const AccomodationStyle = Styled.div`
                 border-radius: 0.3rem;
                 font-size: 1.2rem;
                 background-color: #e26329;
+            }
+            button:hover{
+                background-color: #b44f20;
             }
         }
     }
