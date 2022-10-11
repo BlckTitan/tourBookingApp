@@ -7,35 +7,63 @@ import { StateContext } from '../../utilities/Utilities';
 export default function TourInformation() {
     const{
         firstName, setFirstName, lastName, setLastName, otherName, setOtherName, status, setStatus,
-        gender, setGender, email, setEmail, phoneNumber, setPhoneNumber, step, setStep
+        gender, setGender, email, setEmail, phoneNumber, setPhoneNumber, step, setStep, 
+        setErrorStatus, setErrorMessage
     } = useContext(StateContext);
 
     const next = (e) =>{
-        setStep(step+1)
+        const emptyField = '';
+        switch (emptyField) {
+            case firstName:
+                setErrorStatus(true)
+                setErrorMessage('First name cannot be blank')
+            break;
+            case otherName:
+                setErrorStatus(true)
+                setErrorMessage('Other name cannot be blank')
+            break;
+            case lastName:
+                setErrorStatus(true)
+                setErrorMessage('Last name cannot be blank')
+            break;
+            case email:
+                setErrorStatus(true)
+                setErrorMessage('Email cannot be blank')
+            break;
+            case phoneNumber:
+                setErrorStatus(true)
+                setErrorMessage('Phone number cannot be blank')
+            break;
+        
+            default:
+                setErrorStatus(false)
+                setStep(step+1)
+            break;
+        }
     }
    
   return (
     <ProfileInformationStyle>
 
           <div className='firstName'>
-            <label htmlFor='firstName'>First name
+            <label htmlFor='firstName'>First Name
                 <input type="text" id='firstName' value={firstName} required 
                     placeholder='James' onChange={(e)=>{setFirstName(e.target.value)}}
                 />
             </label>
           </div>
 
-         <div className='lastName'>
-            <label htmlFor='lastName'>Last name
-                <input type="text" id='lastName' value={lastName} required 
-                onChange={(e)=>{setLastName(e.target.value)}} placeholder='David'/>
+          <div className='otherNames'>
+            <label htmlFor='otherNames'>Other Names
+                <input type="text" id='otherNames' value={otherName} required 
+                onChange={(e)=>{setOtherName(e.target.value)}} placeholder='Clark'/>
             </label>
          </div>
 
-         <div className='otherNames'>
-            <label htmlFor='otherNames'>Other names
-                <input type="text" id='otherNames' value={otherName} required 
-                onChange={(e)=>{setOtherName(e.target.value)}} placeholder='Clark'/>
+         <div className='lastName'>
+            <label htmlFor='lastName'>Last Name
+                <input type="text" id='lastName' value={lastName} required 
+                onChange={(e)=>{setLastName(e.target.value)}} placeholder='David'/>
             </label>
          </div>
 

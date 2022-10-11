@@ -24,5 +24,6 @@ export const meal = [
     {id: 1, type: "Bed and breakfast (single)"},
     {id: 2, type: "Half board (single)"},
     {id: 3, type: "Bed and breakfast (per person sharing)"},
-    {id: 4, type: "Half board (per person sharing)"}
+    {id: 4, type: "Half board (per person sharing)"},
+    {id: 5, type: "Room only"}
 ];

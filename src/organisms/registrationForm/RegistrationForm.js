@@ -11,8 +11,9 @@ import { StateContext } from '../../utilities/Utilities';
 
 export default function RegistrationForm() {
     const {
-        firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, journey,
-        tours, mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, setNights, step, setStep
+        firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, journey, ticket,
+        tours, mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, setNights, step, setStep,
+        errorStatus, errorMessage, age
     } = useContext(StateContext)
 
     useEffect(()=>{
@@ -21,7 +22,7 @@ export default function RegistrationForm() {
 
     const formState = {
         firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, tours, 
-        mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights
+        mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, age, journey, ticket
     }
 
     //number of nights count
@@ -40,27 +41,30 @@ export default function RegistrationForm() {
           From : 'dorshman406@gmail.com',
           Subject : "TOUR BOOKING REQUEST",
           Body : `
-            First name : ${formState.firstName}\n<br/>
-            Last name : ${formState.lastName}\n<br/>
+            First Name : ${formState.firstName}\n<br/>
+            Last Name : ${formState.lastName}\n<br/>
             Other Names : ${formState.otherName}\n<br/>
             Marital Status : ${status}\n<br/>
             Gender : ${formState.gender}\n<br/>
             Email : ${formState.email}\n<br/>
-            Phone number : ${formState.phoneNumber}\n<br/>
+            Phone Number : ${formState.phoneNumber}\n<br/>
             Destination : ${formState.country}\n<br/>
-            Date from : ${formState.dateFrom}\n<br/>
-            Date to : ${formState.dateTo}\n<br/>
+            Date From : ${formState.dateFrom}\n<br/>
+            Date To : ${formState.dateTo}\n<br/>
             Nights : ${result}\n<br/>
             Rooms : ${formState.rooms}\n<br/>
             Adults : ${formState.adults}\n<br/>
             Children : ${formState.children}\n<br/>
-            Meal plan : ${formState.mealPlan}\n<br/>
+            Age : ${formState.age}\n<br/>
+            Board : ${formState.mealPlan}\n<br/>
             Tours : ${formState.tours}\n<br/>
-            Car transfers : ${formState.transfers}\n<br/>
+            Journey Type : ${formState.journey}\n<br/>
+            Airport Transfers : ${formState.transfers}\n<br/>
+            Ticket: ${formState.ticket}\n<br/>
           `
         }
 
-        if(window.Email){
+        if(window.Email && (errorStatus === false)){
             window.Email.send(config).then(()=>{
                 setStep(3)
             })
@@ -79,7 +83,8 @@ export default function RegistrationForm() {
         {
             console.log(
                 firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, tours, 
-                mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, journey
+                mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, journey, ticket,
+                errorMessage
             )
         }
     </>

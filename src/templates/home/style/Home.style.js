@@ -4,12 +4,8 @@ import Styled from "styled-components";
 export const Container = Styled.div`
     position: absolute;
     width: 100%;
-    height: 100%;
-    & div.formCarousel{
-        width: 100%;
-        height: 700px;
-    }
+    height: 100vh;
+    
 `;
-
 
 //backdrop-filter: blur(100px);

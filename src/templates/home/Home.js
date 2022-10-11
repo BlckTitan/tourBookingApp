@@ -1,24 +1,20 @@
-import React from 'react';
-//organism
+import React, { useContext, useEffect } from 'react';
+//style
 import { Container } from './style/Home.style';
-import RegistrationForm from '../../organisms/registrationForm/RegistrationForm';
+//organism
 import Footer from '../../organisms/footer/Footer';
 //import Activities from '../../organisms/activities/Activities';
-//molecule
-import Carousel from '../../molecules/carousel/Carousel';
-//data
-import {images} from '../../data/Data';
+//context
+import { StateContext } from '../../utilities/Utilities';
+
 export default function Home() {
+
+  const {errorMessage, setErrorMessage} = useContext(StateContext);
+
   return (
     <Container>
 
-      <div className='formCarousel'>
-        <Carousel imageData={images}/>
-        <RegistrationForm/>
-      </div>
-      
       <Footer/>
-
     </Container>
   )
 }
