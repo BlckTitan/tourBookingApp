@@ -20,19 +20,3 @@ export default function Menu() {
     </Container>
   )
 }
-/*
-import TextSnippetOutlinedIcon from '@mui/icons-material/TextSnippetOutlined';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import ReceiptLongOutlinedIcon from '@mui/icons-material/ReceiptLongOutlined';
-import HelpOutlineOutlinedIcon from '@mui/icons-material/HelpOutlineOutlined';
-import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
-*/
-/* 
-<li><Link to="/#"><TextSnippetOutlinedIcon className='icon'/>Quotes</Link></li>
-<li><Link to="/#"><NotificationsNoneIcon className='icon'/>Notifications</Link></li>
-<li><Link to="/#"><FavoriteBorderOutlinedIcon className='icon'/>Favorites</Link></li>
-<li><Link to="/#"><ReceiptLongOutlinedIcon className='icon'/>Bookings</Link></li>
-<li><Link to="/#"><HelpOutlineOutlinedIcon className='icon'/>Support</Link></li>
-*/
-//<div><Link><AddShoppingCartOutlinedIcon className='icon'/>Cart</Link></div>

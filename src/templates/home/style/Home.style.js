@@ -3,10 +3,39 @@ import Styled from "styled-components";
 
 export const Container = Styled.div`
 
-    position: absolute;
     width: 100%;
-    height: 100vh;
-    background-color: red;
+    height: Calc(100vh - 8rem);
+    div.videoBg{
+        width: 100%;
+        height: 100%;
+        video{
+            width: 100%;
+            height: 100%;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+    div.textOverlay{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3.5rem 2.5rem;
+        color: #0077a3;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        h1{
+            font-family: 'caveat';
+            font-size: 6rem; 
+            margin-bottom: 5rem;
+        }
+        p{
+            font-family: 'caveat';
+            font-size: 3.5rem;
+        }
+    }
+    
     
 `;
 
