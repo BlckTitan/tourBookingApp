@@ -23,8 +23,8 @@ export default function Footer() {
                 <Link to="/#"><WhatsAppIcon className='icon'/></Link>
             </div>
             <div className='info'>
-                <Link to="/#">Home</Link>
-                <Link to="/#">About Us</Link>
+                <Link to="/">Home</Link>
+                <Link to="/bookings">Bookings</Link>
                 <Link to="/#">Terms and Conditions</Link>
             </div>
         </div>

@@ -11,7 +11,7 @@ export default function Layout() {
     <Container>
         <Navigation/>
         <main>
-            <Outlet/>
+          <Outlet/>
         </main>
     </Container>
   )

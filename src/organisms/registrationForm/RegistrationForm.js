@@ -1,6 +1,6 @@
 import React, { useContext, useEffect }from 'react';
 //style
-import {Form} from './style/RegistrationForm';
+import {Form} from './style/RegistrationForm.style';
 //organisms
 import TourInformation from '../tourInformation/TourInformation';
 import ProfileInformation from '../profileInformation/ProfileInformation';

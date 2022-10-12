@@ -2,21 +2,17 @@ import Styled from "styled-components";
 //import img from '../img/luca-mazzotta-ytrfvd7_4EU-unsplash.jpg';
 
 export const Container = Styled.div`
-    position: absolute;
     width: 100%;
     height: 100%;
     & div.formCarousel{
         position: relative;
         width: 100%;
-        height: 700px;
-
+        height: 45rem;
         & div.form{
             display: flex;
             justify-content: start;
             align-items: center;
             width: 100%;
-            height: 700px;
-
             & div.errorMessageBox{
                 width: 25rem;
                 height: auto;

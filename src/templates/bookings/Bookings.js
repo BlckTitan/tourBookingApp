@@ -4,7 +4,6 @@ import { Container } from './style/Bookings.style';
 //organism
 import RegistrationForm from '../../organisms/registrationForm/RegistrationForm';
 import Footer from '../../organisms/footer/Footer';
-//import Activities from '../../organisms/activities/Activities';
 //context
 import { StateContext } from '../../utilities/Utilities';
 //molecule
@@ -23,7 +22,7 @@ export default function Bookings() {
   const clearErrorMesssage = () =>{
       setErrorMessage('');
   }
-  
+
   return (
     <Container>
 
@@ -39,9 +38,7 @@ export default function Bookings() {
           }
         </div>
       </div>
-      
       <Footer/>
-
     </Container>
   )
 }

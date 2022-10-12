@@ -1,8 +1,7 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 //style
 import { Container } from './style/Home.style';
 //organism
-import Footer from '../../organisms/footer/Footer';
 //import Activities from '../../organisms/activities/Activities';
 //context
 import { StateContext } from '../../utilities/Utilities';
@@ -14,7 +13,6 @@ export default function Home() {
   return (
     <Container>
 
-      <Footer/>
     </Container>
   )
 }

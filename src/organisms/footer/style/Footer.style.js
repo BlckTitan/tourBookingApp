@@ -1,18 +1,17 @@
 import Styled from "styled-components";
 
 export const FooterStyle = Styled.div`
-    display: flex;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         background-color: #272726;
         width: 100%;
-        height: 300px;
+        height: 15rem;
         padding: 0 12rem;
         div.siteTitle{
             font-family: Times, 'Roboto',sans-serif, 'Montserrat';
-            padding: 1.5rem 0;
             width: 100%;
+            padding: 2rem 0;
             text-align: center;
             font-size: 4rem;
             color: #fff;
