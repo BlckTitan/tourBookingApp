@@ -6,6 +6,7 @@ export default function Utilities(props) {
     const [step, setStep] = useState(0)
     const [errorStatus, setErrorStatus] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+
     //form 1
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');

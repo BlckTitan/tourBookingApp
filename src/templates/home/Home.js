@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 //style
 import { Container } from './style/Home.style';
-import airplaneComp from './vids/airplane.mp4'
-import paradiseComp from './vids/paradise.mp4';
+import airplaneComp from './vids/airplaneCrossing.mp4'
+import pier from './vids/woodenPier.mp4';
 //organism
 //import Activities from '../../organisms/activities/Activities';
 //context
@@ -16,7 +16,7 @@ export default function Home() {
     <Container>
 
       <div className='videoBg'>
-        <video src={paradiseComp} autoPlay loop muted>
+        <video src={pier} autoPlay loop muted>
           <source src={airplaneComp} ></source>
           Your browser does not support this video
         </video>

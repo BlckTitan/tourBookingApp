@@ -5,26 +5,25 @@ import { TourInformationStyle } from './style/TourInformation.style';
 import {location, meal} from '../../data/Data';
 import { StateContext } from '../../utilities/Utilities';
 
-
 export default function TourInformation() {
-    const {transfers, setTransfers,
-      tours, setTours, mealPlan, setMealPlan, rooms, setRooms, adults, setAdults, children, setChildren,
-      country, setCountry, dateFrom, setDateFrom, dateTo, setDateTo, nights, setNights, step, setStep,
-      age, setAge, setJourney, ticket, setTicket, setErrorMessage, setErrorStatus
-    } = useContext(StateContext);
+    const {setTransfers, setAge, setJourney,
+      tours, setTours, setMealPlan, setRooms, setAdults, children, setChildren, setErrorStatus,
+      setCountry, dateFrom, setDateFrom, dateTo, setDateTo, nights, step, setStep, setErrorMessage
+       } = useContext(StateContext);
 
     const next = (e) =>{
+      //checking for empty fields
       const emptyField = '';
-      const emptyDate = '00/00/0000'
+      const emptyDate = '00/00/0000';
       
       switch (emptyField || emptyDate || '0') {
           case dateFrom:
               setErrorStatus(true)
-              setErrorMessage('From date cannot be blank')
+              setErrorMessage('Start date cannot be blank')
           break;
           case dateTo:
               setErrorStatus(true)
-              setErrorMessage('To date cannot be blank')
+              setErrorMessage('End date cannot be blank')
           break;
           case nights:
               setErrorStatus(true)

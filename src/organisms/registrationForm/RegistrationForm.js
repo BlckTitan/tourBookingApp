@@ -38,12 +38,12 @@ export default function RegistrationForm() {
         const config = {
           SecureToken : "b623a7bc-abfe-4f39-9aff-a5d8070b92b3",
           To : 'ugorjivictoreze@gmail.com',
-          From : 'dorshman406@gmail.com',
-          Subject : "TOUR BOOKING REQUEST",
+          From : `${formState.email}`,
+          Subject : `NEW TOUR BOOKING REQUEST`,
           Body : `
             First Name : ${formState.firstName}\n<br/>
-            Last Name : ${formState.lastName}\n<br/>
             Other Names : ${formState.otherName}\n<br/>
+            Last Name : ${formState.lastName}\n<br/>
             Marital Status : ${status}\n<br/>
             Gender : ${formState.gender}\n<br/>
             Email : ${formState.email}\n<br/>

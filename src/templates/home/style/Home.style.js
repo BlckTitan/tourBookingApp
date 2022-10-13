@@ -26,12 +26,12 @@ export const Container = Styled.div`
         position: absolute;
         top: 0;
         h1{
-            font-family: 'caveat';
+            //font-family: 'caveat';
             font-size: 6rem; 
             margin-bottom: 5rem;
         }
         p{
-            font-family: 'caveat';
+            //font-family: 'caveat';
             font-size: 3.5rem;
         }
     }

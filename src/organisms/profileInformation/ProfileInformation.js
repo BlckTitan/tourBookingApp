@@ -8,23 +8,28 @@ export default function TourInformation() {
     const{
         firstName, setFirstName, lastName, setLastName, otherName, setOtherName, status, setStatus,
         gender, setGender, email, setEmail, phoneNumber, setPhoneNumber, step, setStep, 
-        setErrorStatus, setErrorMessage
+        setErrorStatus, setErrorMessage, errorStatus, errorMessage
     } = useContext(StateContext);
 
     const next = (e) =>{
+        //checking for empty fields
         const emptyField = '';
+    
         switch (emptyField) {
             case firstName:
-                setErrorStatus(true)
                 setErrorMessage('First name cannot be blank')
+                //(!isNaN(firstName)) ? setErrorMessage('First name cannot be blank') : setErrorStatus(false)  
+                setErrorStatus(true)
             break;
             case otherName:
-                setErrorStatus(true)
                 setErrorMessage('Other name cannot be blank')
+                //(!isNaN(otherName)) ? setErrorMessage('Other name cannot be blank') : setErrorStatus(false)  
+                setErrorStatus(true)
             break;
             case lastName:
-                setErrorStatus(true)
                 setErrorMessage('Last name cannot be blank')
+                //(!isNaN(lastName)) ? setErrorMessage('Last name cannot be blank') : setErrorStatus(false)  
+                setErrorStatus(true)
             break;
             case email:
                 setErrorStatus(true)
@@ -34,12 +39,14 @@ export default function TourInformation() {
                 setErrorStatus(true)
                 setErrorMessage('Phone number cannot be blank')
             break;
-        
             default:
                 setErrorStatus(false)
-                setStep(step+1)
             break;
         }
+        if(errorStatus === false){
+            setStep(step+1)
+        }
+
     }
    
   return (
@@ -88,14 +95,14 @@ export default function TourInformation() {
 
          <div className='email'>
             <label htmlFor='email'>Email
-                <input type="email" id='email' value={email} required 
+                <input type="email" id='email' value={email} required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 onChange={(e)=>{setEmail(e.target.value)}}placeholder='email@email.com'/>
             </label>
          </div>
 
          <div className='phoneNumber'>
             <label htmlFor='phoneNumber'>Phone number (WhatsApp)
-                <input type="text" className="phoneNumber" id='phoneNumber' value={phoneNumber} required 
+                <input type="tel" className="phoneNumber" id='phoneNumber' value={phoneNumber} required 
                 onChange={(e)=>{setPhoneNumber(e.target.value)}} placeholder='+ 234 813 000 0009'/>
             </label>
          </div>

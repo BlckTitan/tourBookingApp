@@ -31,6 +31,10 @@ export const Container = Styled.div`
             & a:hover{
                 color: #e26329;
             }
+            a.active.home, 
+            a.active.bookings{
+                color: #e26329;
+            }
         }
     }
     div{
