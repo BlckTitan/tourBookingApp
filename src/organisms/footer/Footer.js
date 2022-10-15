@@ -21,13 +21,13 @@ export default function Footer() {
         <div className='otherInfo'>
             <div className='socials'>
                 <a target="blank" href="https://instagram.com/worldlinkbesttravelsandtours">
-                  <InstagramIcon className='icon'/>
+                  <InstagramIcon className='icon instagram'/>
                 </a>
                 <a target="blank" href="https://www.facebook.com/worldlinkbesttravelandtours">
-                  <FacebookOutlinedIcon className='icon'/>
+                  <FacebookOutlinedIcon className='icon facebook'/>
                 </a>
                 <a target="blank" href="https://wa.me/message/KYRAGWC3FD6ND1">
-                  <WhatsAppIcon className='icon'/>
+                  <WhatsAppIcon className='icon whatsapp'/>
                 </a>
             </div>
             <div className='info'>

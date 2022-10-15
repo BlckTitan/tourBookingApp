@@ -13,7 +13,7 @@ export default function RegistrationForm() {
     const {
         firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, ticket,
         tours, mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, setNights, step, setStep,
-        errorStatus, errorMessage, age, rating, setErrorStatus, confirmed, setConfirmed
+        errorStatus, errorMessage, age, rating, setErrorStatus, setErrorMessage, confirmed, setConfirmed
     } = useContext(StateContext)
 
     useEffect(()=>{
@@ -32,7 +32,12 @@ export default function RegistrationForm() {
     const dateStart = new Date(dateFrom);
     const dateEnd = new Date(dateTo);
     const currentTime = (dateEnd - dateStart);
-    const result = Math.ceil(currentTime / (1000 * 60 * 60 * 24));
+    if(Math.sign(currentTime) === -1){
+        setErrorStatus('true') 
+        setErrorMessage('Nights can not be a negative number')
+    }else{
+        var result = Math.ceil(currentTime / (1000 * 60 * 60 * 24));
+    }
     
     const submitHandler = (e) =>{
         

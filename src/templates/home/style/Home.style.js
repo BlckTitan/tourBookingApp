@@ -86,8 +86,38 @@ export const Container = Styled.div`
             align-items:  center;
             margin-top: 2rem;
             padding: 7rem 0;
+            position: relative;
             width: 100%;
             height: 50rem;
+
+            div.socials{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                bottom: 6rem;
+                left: 2rem;
+                opacity: 1;
+                a{
+                    margin: 0.3rem 0;
+                    .icon{
+                        font-size: 2.5rem;
+                    }
+                    .icon.facebook{
+                        color: #35548e;
+                    }
+                    .icon.instagram{
+                        color: #8134AF;
+                    }
+                    .icon.whatsapp{
+                        color: #4AC958;
+                    }
+                }
+                a:hover{
+                    transform: scale(1.5);
+                }
+            }
             a{
                 button{
                     width: 12rem;
@@ -96,11 +126,11 @@ export const Container = Styled.div`
                     color: #fff;
                     font-size: 1.2rem;
                     border-radius: 0.3rem;
-                    background-color: royalblue;
+                    background-color: #4169e1;
                     animation: btnBounce 4s ease-in-out 1s infinite normal none;
                 }
                 button:hover{
-                    background-color: #002366;
+                    background-color: #3454b4;
                 }
             }
         }

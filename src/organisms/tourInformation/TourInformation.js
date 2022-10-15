@@ -4,8 +4,17 @@ import { TourInformationStyle } from './style/TourInformation.style';
 //data
 import {location, meal} from '../../data/Data';
 import { StateContext } from '../../utilities/Utilities';
+//validation
+import Validation from '../../molecules/validation/Validation';
 
 export default function TourInformation() {
+
+  const [validateFields, setValidateFields] = useState()
+
+  useEffect(()=>{
+      setValidateFields('false')
+  }, [validateFields])
+
     const {setTransfers, setAge, errorStatus, errorMessage,
       tours, setTours, setMealPlan, setRooms, setAdults, children, setChildren, setErrorStatus,
       setCountry, dateFrom, setDateFrom, dateTo, setDateTo, nights, step, setStep, setErrorMessage,
@@ -20,40 +29,6 @@ export default function TourInformation() {
       setCurrentDate(`'${date.getFullYear()}-${date.getMonth()}-${date.getDay()}'`)
     }, [errorStatus, currentDate])
 
-    const validate = (e) =>{
-      //checking for empty fields
-      const emptyField = '';
-      const emptyDate = '00/00/0000';
-      
-      switch (emptyField || emptyDate || '0') {
-          case dateFrom:
-              setErrorStatus('true')
-              setErrorMessage('Start date cannot be blank')
-          break;
-          case dateTo:
-              setErrorStatus('true')
-              setErrorMessage('End date cannot be blank')
-          break;
-          case nights:
-              setErrorStatus('true')
-              setErrorMessage('Nights cannot be 0')
-          break;
-          case tours:
-              setErrorStatus('true')
-              setErrorMessage('Tour cannot be blank')
-          break;
-          default:
-              setErrorStatus('false')
-              nextStep();
-          break;
-      }
-  }
-  const nextStep = () => {
-    
-    if(errorStatus === 'false'){
-      setStep(2)
-    }
-  }
     
   return (
     <TourInformationStyle>
@@ -72,7 +47,6 @@ export default function TourInformation() {
           <label htmlFor="forDate">
             From
             <input type="date" 
-            min={`"${date.getFullYear()}-${date.getMonth()}-${date.getDay()}"`}
             id='forDate' required  value={dateFrom}
               onChange={
                 (e)=>{
@@ -208,8 +182,17 @@ export default function TourInformation() {
 
          <div className='formNavigation'>
           <button className='previous' onClick={()=>{setStep(0)}}>Go back</button>
-          <button type="submit" className='next' onClick={()=>{validate()}}>Continue</button>
+          <button type="submit" className='next' onClick={()=>{setValidateFields('true')}}>Continue</button>
          </div>
+
+         {
+          (validateFields === 'true') && 
+            <Validation 
+                fields={{dateFrom, dateTo, nights, tours}}
+                type='tour'
+            />
+        }
+
     </TourInformationStyle>
   )
 }

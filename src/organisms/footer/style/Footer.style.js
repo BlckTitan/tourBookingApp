@@ -35,6 +35,15 @@ export const FooterStyle = Styled.div`
                 .icon{
                     font-size: 2rem;
                 }
+                .icon.facebook{
+                    color: #35548e;
+                }
+                .icon.instagram{
+                    color: #8134AF;
+                }
+                .icon.whatsapp{
+                    color: #4AC958;
+                }
             }
             a:hover{
                 color: #e26329;

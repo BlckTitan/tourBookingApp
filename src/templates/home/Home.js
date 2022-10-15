@@ -9,6 +9,12 @@ import pier from './vids/woodenPier.mp4';
 import audioFile from './audio/soul.mp3';
 //context
 import { StateContext } from '../../utilities/Utilities';
+//icons
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
+//import TwitterIcon from '@mui/icons-material/Twitter';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+//import PinterestIcon from '@mui/icons-material/Pinterest';
 
 export default function Home() {
   
@@ -28,7 +34,7 @@ export default function Home() {
           Your browser does not support this video
         </video>
 
-        <audio src={audioFile} autoplay>
+        <audio src={audioFile} autoPlay loop>
           <source src={audioFile} type="audio/mpeg"/>
           Your browser does not support the audio element.
         </audio>
@@ -44,6 +50,18 @@ export default function Home() {
         </p>
 
       <div className='callToAction'>
+
+          <div className='socials'>
+              <a target="blank" href="https://instagram.com/worldlinkbesttravelsandtours">
+                <InstagramIcon className='icon instagram'/>
+              </a>
+              <a target="blank" href="https://www.facebook.com/worldlinkbesttravelandtours">
+                <FacebookOutlinedIcon className='icon facebook'/>
+              </a>
+              <a target="blank" href="https://wa.me/message/KYRAGWC3FD6ND1">
+                <WhatsAppIcon className='icon whatsapp'/>
+              </a>
+          </div>
         
           <Link to='/bookings'
             onClick={()=>{setActiveLink('active bookings')}}

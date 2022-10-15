@@ -25,7 +25,7 @@ export default function Utilities(props) {
     const [rooms, setRooms] = useState('1');
     const [rating, setRating] = useState('3 Star');
     const [adults, setAdults] = useState('1');
-    const [children, setChildren] = useState('0');
+    const [children, setChildren] = useState(['0']);
     const [age, setAge] = useState('0');
     const [country, setCountry] = useState("Seychelles");
     const [dateFrom, setDateFrom] = useState('00/00/0000');
