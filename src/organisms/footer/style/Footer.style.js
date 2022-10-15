@@ -8,14 +8,18 @@ export const FooterStyle = Styled.div`
         width: 100%;
         height: 15rem;
         padding: 0 12rem;
-        div.siteTitle{
-            font-family: Times, 'Roboto',sans-serif, 'Montserrat';
+        div.logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 100%;
             padding: 2rem 0;
-            text-align: center;
-            font-size: 4rem;
-            color: #fff;
-            border-bottom: 1px solid #e8e8e8; 
+            border-bottom: 1px solid #e8e8e8;
+            img{
+                width: 25rem;
+                height: 5rem;
+                object-fit: cover;
+            } 
         }
         div.otherInfo{
             display: flex;
@@ -24,7 +28,7 @@ export const FooterStyle = Styled.div`
             width: 100%;
             margin-top: 1rem;
             padding: 1rem;
-            a{
+            a, p{
                 color: #e8e8e8;
                 margin-right: 1rem;
                 font-size: 1rem;

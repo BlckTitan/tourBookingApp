@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import img3 from './img/img3.jpg';
+//import img1 from './img/img1.jpg';
+//import img2 from './img/img3.jpg';
+import img3 from './img/img5.jpg';
 //style
 import {CarouselImg, CarouselCard} from './style/Carousel.style';
 
 export default function Carousel({imageData}) {
   const [currentImg, setCurrentImg] = useState(0);
     useEffect(()=>{
-        setTimeout(carouselSlide, 60000)
+        setTimeout(carouselSlide, 3000)
         
     })
     const carouselSlide = () =>{

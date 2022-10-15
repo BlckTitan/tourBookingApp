@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { Link, useLocation } from 'react-router-dom';
 //styled-Components
 import { Container } from './style/Menu.style';
@@ -6,15 +6,18 @@ import { Container } from './style/Menu.style';
 import HomeIcon from '@mui/icons-material/Home';
 //import BedroomParentOutlinedIcon from '@mui/icons-material/BedroomParentOutlined';
 import BookOnlineIcon from '@mui/icons-material/BookOnline';
+import { StateContext } from '../../utilities/Utilities';
 //import AttractionsIcon from '@mui/icons-material/Attractions';
 //import CarRentalIcon from '@mui/icons-material/CarRental';
 //import AirportShuttleIcon from '@mui/icons-material/AirportShuttle';
 
 export default function Menu() {
   const location = useLocation();
+  const {activeLink, setActiveLink} = useContext(StateContext)
+  useEffect(()=>{
+    setActiveLink(location.pathname)
+  }, [location])
 
-
-  const [activeLink, setActiveLink] = useState(location.pathname)
   return (
     <Container>
         <ul>

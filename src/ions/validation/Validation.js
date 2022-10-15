@@ -83,4 +83,30 @@ export default function Validation(){
         setErrorStatus(false)
         setStep(step+1)
     break;
+
+
+
+    if ((firstName === emptyField)){
+        setErrorMessage('First name cannot be blank')
+        setErrorStatus(true)
+    } else  if((lastName === emptyField)){
+        setErrorMessage('Other name cannot be blank')  
+        setErrorStatus(true)
+    }else if((otherName === emptyField)){
+        setErrorMessage('Last name cannot be blank')  
+        setErrorStatus(true)
+    }else if(email === emptyField){
+        setErrorStatus(true)
+        setErrorMessage('Email cannot be blank')
+    }else if((phoneNumber === emptyField)){
+        setErrorStatus(true)
+        setErrorMessage('Phone number cannot be blank')
+    } else{
+        setErrorStatus(false)
+    }
+
+    if(errorStatus === false && errorMessage === ''){
+        setStep(1)
+    }
+
  */

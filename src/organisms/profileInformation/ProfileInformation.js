@@ -5,34 +5,34 @@ import { ProfileInformationStyle } from './style/ProfileInformation.style';
 import { StateContext } from '../../utilities/Utilities';
 
 export default function TourInformation() {
+
+
     const{
         firstName, setFirstName, lastName, setLastName, otherName, setOtherName, status, setStatus,
         gender, setGender, email, setEmail, phoneNumber, setPhoneNumber, step, setStep, 
         setErrorStatus, setErrorMessage, errorStatus, errorMessage
     } = useContext(StateContext);
 
-    const next = (e) =>{
+    const validate = (e) =>{
         //checking for empty fields
         const emptyField = '';
-    
+        
         switch (emptyField) {
+
             case firstName:
-                setErrorMessage('First name cannot be blank')
-                //(!isNaN(firstName)) ? setErrorMessage('First name cannot be blank') : setErrorStatus(false)  
-                setErrorStatus(true)
+                setErrorMessage('First name cannot be blank')  
+                setErrorStatus('true')
             break;
             case otherName:
-                setErrorMessage('Other name cannot be blank')
-                //(!isNaN(otherName)) ? setErrorMessage('Other name cannot be blank') : setErrorStatus(false)  
-                setErrorStatus(true)
+                setErrorMessage('Other name cannot be blank') 
+                setErrorStatus('true')
             break;
             case lastName:
-                setErrorMessage('Last name cannot be blank')
-                //(!isNaN(lastName)) ? setErrorMessage('Last name cannot be blank') : setErrorStatus(false)  
-                setErrorStatus(true)
+                setErrorMessage('Last name cannot be blank') 
+                setErrorStatus('true')
             break;
             case email:
-                setErrorStatus(true)
+                setErrorStatus('true')
                 setErrorMessage('Email cannot be blank')
             break;
             case phoneNumber:
@@ -40,13 +40,15 @@ export default function TourInformation() {
                 setErrorMessage('Phone number cannot be blank')
             break;
             default:
-                setErrorStatus(false)
+                setErrorStatus('false')
+                nextStep()
             break;
         }
-        if(errorStatus === false){
-            setStep(step+1)
+    }
+    const nextStep = () => {
+        if((errorStatus === 'false') && (errorMessage === '')){
+            setStep(1)
         }
-
     }
    
   return (
@@ -61,7 +63,7 @@ export default function TourInformation() {
           </div>
 
           <div className='otherNames'>
-            <label htmlFor='otherNames'>Other Names
+            <label htmlFor='otherNames'>Other Name
                 <input type="text" id='otherNames' value={otherName} required 
                 onChange={(e)=>{setOtherName(e.target.value)}} placeholder='Clark'/>
             </label>
@@ -76,7 +78,7 @@ export default function TourInformation() {
 
          <div className='otherInfo'>
             <label htmlFor='status'>Marital status
-                <select id='status' required
+                <select id='status' 
                      onChange={(e)=>{setStatus(e.target.value)}}
                 >
                     <option value='single'>Single</option>
@@ -84,11 +86,11 @@ export default function TourInformation() {
                 </select>
             </label>
             <label htmlFor='gender'>Gender
-                <select id='gender' required
+                <select id='gender' 
                     onChange={(e)=>{setGender(e.target.value)}}
                 >
-                    <option value='male'>Male</option>
-                    <option value='female'>Female</option>
+                    <option value='Male'>Male</option>
+                    <option value='Female'>Female</option>
                 </select>
             </label>
          </div>
@@ -108,7 +110,7 @@ export default function TourInformation() {
          </div>
 
          <div className='continue'>
-          <button type='submit' onClick={(e)=>next(e)}>Continue</button>
+          <button type='submit' onClick={(e)=>{validate(e)}}>Continue</button>
          </div>
 
     </ProfileInformationStyle>

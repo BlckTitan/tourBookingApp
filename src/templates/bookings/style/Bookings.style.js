@@ -19,7 +19,7 @@ export const Container = Styled.div`
                 padding: 1rem;
                 font-size: 1.2rem;
                 position: absolute;
-                left: 47%;
+                left: 55rem;
                 top: 2rem;
                 border-radius: 0.3rem;
                 background-color: #FBCEB1;

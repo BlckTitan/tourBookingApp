@@ -16,7 +16,7 @@ export default function Bookings() {
     const {errorMessage, setErrorMessage} = useContext(StateContext);
 
   useEffect(()=>{
-    setTimeout(clearErrorMesssage, 5000)
+    setTimeout(clearErrorMesssage, 8000)
   }, [errorMessage])
 
   const clearErrorMesssage = () =>{

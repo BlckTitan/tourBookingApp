@@ -11,24 +11,27 @@ import { StateContext } from '../../utilities/Utilities';
 
 export default function RegistrationForm() {
     const {
-        firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, journey, ticket,
+        firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, ticket,
         tours, mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, setNights, step, setStep,
-        errorStatus, errorMessage, age
+        errorStatus, errorMessage, age, rating, setErrorStatus, confirmed, setConfirmed
     } = useContext(StateContext)
 
     useEffect(()=>{
         setNights(result)
-    }, [dateFrom, dateTo])
+        setErrorStatus('false')
+        setConfirmed('false')
+    }, [dateFrom, dateTo, errorStatus, confirmed])
 
     const formState = {
         firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, tours, 
-        mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, age, journey, ticket
+        mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, age, ticket,
+        rating
     }
 
     //number of nights count
     const dateStart = new Date(dateFrom);
     const dateEnd = new Date(dateTo);
-    const currentTime = Math.abs(dateEnd - dateStart);
+    const currentTime = (dateEnd - dateStart);
     const result = Math.ceil(currentTime / (1000 * 60 * 60 * 24));
     
     const submitHandler = (e) =>{
@@ -42,7 +45,7 @@ export default function RegistrationForm() {
           Subject : `NEW TOUR BOOKING REQUEST`,
           Body : `
             First Name : ${formState.firstName}\n<br/>
-            Other Names : ${formState.otherName}\n<br/>
+            Other Name : ${formState.otherName}\n<br/>
             Last Name : ${formState.lastName}\n<br/>
             Marital Status : ${status}\n<br/>
             Gender : ${formState.gender}\n<br/>
@@ -53,18 +56,18 @@ export default function RegistrationForm() {
             Date To : ${formState.dateTo}\n<br/>
             Nights : ${result}\n<br/>
             Rooms : ${formState.rooms}\n<br/>
+            Rating : ${formState.rating}\n<br/>
             Adults : ${formState.adults}\n<br/>
             Children : ${formState.children}\n<br/>
             Age : ${formState.age}\n<br/>
             Board : ${formState.mealPlan}\n<br/>
             Tours : ${formState.tours}\n<br/>
-            Journey Type : ${formState.journey}\n<br/>
             Airport Transfers : ${formState.transfers}\n<br/>
             Ticket: ${formState.ticket}\n<br/>
           `
         }
 
-        if(window.Email && (errorStatus === false)){
+        if(window.Email && errorStatus === 'false' && confirmed === 'true'){
             window.Email.send(config).then(()=>{
                 setStep(3)
             })
@@ -76,15 +79,16 @@ export default function RegistrationForm() {
     <>
         <Form onSubmit={(e) => submitHandler(e)}>
             { step === 0 && <ProfileInformation/> }
-            { step === 1 && <TourInformation/> }
-            { step === 2 && <Confirm/> }
-            { step === 3 && <Success/> }
+            { (step === 1 && errorStatus === 'false') && <TourInformation/> }
+            { (step === 2 && errorStatus === 'false') && <Confirm/> }
+            { (step === 3 && confirmed === 'false') && <Success/> }
         </Form>
         {
             console.log(
-                firstName, lastName, otherName, status, gender, email, phoneNumber, transfers, tours, 
-                mealPlan, rooms, adults, children, country, dateFrom, dateTo, nights, journey, ticket,
-                errorMessage
+                firstName, lastName, otherName, status, gender, email, phoneNumber,
+                country, dateFrom, dateTo, nights, rooms, rating, adults, children, transfers, tours, 
+                mealPlan, ticket,
+                errorMessage, step,  errorStatus, confirmed
             )
         }
     </>

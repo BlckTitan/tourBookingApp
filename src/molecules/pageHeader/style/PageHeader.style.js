@@ -2,17 +2,20 @@ import Styled from "styled-components";
 
 export const Container = Styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 3rem;
+    height: 3.5rem;
     background-color: #272726;
-    font-size: 1rem;
-    padding: 1rem;
-    color: #e8e8e8;
-    div{
-        .logo{
-            color: #e8e8e8;
-        }
+    padding: 0 1rem;
+    div.logo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        img{
+            width: 15rem;
+            height: 3.3rem;
+            object-fit: cover;
+        } 
     }
     ul{
         display:  flex;
