@@ -13,7 +13,7 @@ export const FooterStyle = Styled.div`
             justify-content: center;
             align-items: center;
             width: 100%;
-            padding: 2rem 0;
+            padding: 1rem 0;
             border-bottom: 1px solid #e8e8e8;
             img{
                 width: 25rem;

@@ -32,9 +32,9 @@ export default function RegistrationForm() {
     const dateStart = new Date(dateFrom);
     const dateEnd = new Date(dateTo);
     const currentTime = (dateEnd - dateStart);
-    if(Math.sign(currentTime) === -1){
-        setErrorStatus('true') 
-        setErrorMessage('Nights can not be a negative number')
+    if((Math.sign(currentTime) === -1)){
+        setErrorStatus('true');
+        setErrorMessage('Nights can not be a negative number');
     }else{
         var result = Math.ceil(currentTime / (1000 * 60 * 60 * 24));
     }
@@ -92,7 +92,7 @@ export default function RegistrationForm() {
             console.log(
                 firstName, lastName, otherName, status, gender, email, phoneNumber,
                 country, dateFrom, dateTo, nights, rooms, rating, adults, children, transfers, tours, 
-                mealPlan, ticket,
+                mealPlan, ticket, age,
                 errorMessage, step,  errorStatus, confirmed
             )
         }

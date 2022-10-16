@@ -6,29 +6,23 @@ import {location, meal} from '../../data/Data';
 import { StateContext } from '../../utilities/Utilities';
 //validation
 import Validation from '../../molecules/validation/Validation';
+//ages
+import Age from './Age';
 
 export default function TourInformation() {
 
   const [validateFields, setValidateFields] = useState()
-
-  useEffect(()=>{
-      setValidateFields('false')
-  }, [validateFields])
-
-    const {setTransfers, setAge, errorStatus, errorMessage,
-      tours, setTours, setMealPlan, setRooms, setAdults, children, setChildren, setErrorStatus,
-      setCountry, dateFrom, setDateFrom, dateTo, setDateTo, nights, step, setStep, setErrorMessage,
-      setRating
-    } = useContext(StateContext);
-
-    const [currentDate, setCurrentDate] = useState('0000-00-00')
-    const date = new Date()
+  
+  const {setTransfers,
+    tours, setTours, setMealPlan, setRooms, setAdults, children, setChildren,
+    setCountry, dateFrom, setDateFrom, dateTo, setDateTo, nights, setStep,
+    setRating
+  } = useContext(StateContext);
 
     useEffect(()=>{
-      setErrorStatus('false')
-      setCurrentDate(`'${date.getFullYear()}-${date.getMonth()}-${date.getDay()}'`)
-    }, [errorStatus, currentDate])
-
+        setValidateFields('false')
+    }, [validateFields])
+    
     
   return (
     <TourInformationStyle>
@@ -53,7 +47,7 @@ export default function TourInformation() {
                   setDateFrom(e.target.value)
               }}
             />
-            {console.log(currentDate.toString())}
+
           </label>
           <label htmlFor='toDate'>
             To
@@ -112,26 +106,12 @@ export default function TourInformation() {
                 <option value='6'>6</option>
               </select>
             </label>
-            {
-              (children > 0) &&
+         </div>
 
-              <label>
-                Age
-                <select onClick={(e) => setAge(e.target.value)} required>
-                  <option value='0+'>0+</option>
-                  <option value='1'>1</option>
-                  <option value='2'>2</option>
-                  <option value='3'>3</option>
-                  <option value='4'>4</option>
-                  <option value='5'>5</option>
-                  <option value='6'>6</option>
-                  <option value='7'>7</option>
-                  <option value='8'>8</option>
-                  <option value='9'>9</option>
-                  <option value='10'>10</option>
-                  <option value='11'>11</option>
-                </select>
-              </label>
+         <div>
+            {
+              //render children ages
+              (children > 0) && <Age/>
             } 
          </div>
 
@@ -196,3 +176,35 @@ export default function TourInformation() {
     </TourInformationStyle>
   )
 }
+/**
+ * const [currentDate, setCurrentDate] = useState('0000-00-00')
+    const date = new Date()
+
+    useEffect(()=>{
+      setErrorStatus('false')
+      setCurrentDate(`${date.getFullYear().toString()}-${date.getMonth().toString()}-${date.getDay().toString()}'`)
+    }, [errorStatus, currentDate])
+ */
+
+
+    /**
+     * 
+     * 
+     * <label>
+        Age
+        <select onClick={(e) => setAge(e.target.value)} required>
+          <option value='0+'>0+</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10'>10</option>
+          <option value='11'>11</option>
+        </select>
+      </label>
+*/

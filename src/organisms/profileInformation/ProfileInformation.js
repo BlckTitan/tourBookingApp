@@ -7,7 +7,7 @@ import { StateContext } from '../../utilities/Utilities';
 import Validation from '../../molecules/validation/Validation';
 
 export default function TourInformation() {
-
+    
     const [validateFields, setValidateFields] = useState()
 
     useEffect(()=>{
@@ -16,10 +16,10 @@ export default function TourInformation() {
     
     const{
         firstName, setFirstName, lastName, setLastName,
-         otherName, setOtherName, setStatus,
+         otherName, setOtherName, setStatus, 
         setGender, email, setEmail, phoneNumber, setPhoneNumber,
     } = useContext(StateContext);
-   
+
   return (
     <ProfileInformationStyle>
 

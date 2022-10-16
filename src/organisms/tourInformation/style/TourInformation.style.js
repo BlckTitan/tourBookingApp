@@ -11,7 +11,7 @@ export const TourInformationStyle = Styled.div`
         color: #272726;
     }
     div{
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         label{
             display: flex;
             flex-direction: column;
