@@ -42,7 +42,7 @@ export default function Home() {
       </div>
 
       <div className='textOverlay'>
-        <h1>Enjoy a well deserved vacation</h1>
+        <h1>Enjoy a well deserved vacation.</h1>
         <p>
             Vacations will never be boring again. 
             You dream it, We make it happen.

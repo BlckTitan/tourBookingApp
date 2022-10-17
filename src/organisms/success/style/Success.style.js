@@ -7,12 +7,13 @@ export const SuccessStyle = Styled.div`
     position: relative;
     width: 100%;
     height: 500px;
-    padding: 5rem;
+    text-align: center;
+    padding: 5vw;
     .icon{
         position: absolute;
         top: 25%;
         opacity: 0.4;
-        font-size: 15rem;
+        font-size: 15vw;
         color: #2a792c;
     }
 `;

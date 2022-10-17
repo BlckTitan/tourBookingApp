@@ -27,13 +27,22 @@ export const FooterStyle = Styled.div`
             align-items: center;
             width: 100%;
             margin-top: 1rem;
-            padding: 1rem;
+            padding: 1vw;
+            div.socials{
+                width: 20vw;
+                text-wrap: nowrap;
+                
+            }
+            div.info{
+                width: Calc(100% - 20vw);
+                text-align: right;
+            }
             a, p{
                 color: #e8e8e8;
                 margin-right: 1rem;
                 font-size: 1rem;
                 .icon{
-                    font-size: 2rem;
+                    font-size: 2vw;
                 }
                 .icon.facebook{
                     color: #35548e;

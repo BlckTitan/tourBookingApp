@@ -13,7 +13,7 @@ export default function Carousel({imageData}) {
     })
     const carouselSlide = () =>{
         setCurrentImg(currentImg + 1)
-        if(currentImg > 4){
+        if(currentImg > 2){
             setCurrentImg(0)
         }
     }

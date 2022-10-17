@@ -8,6 +8,7 @@ export default function Utilities(props) {
     const [errorMessage, setErrorMessage] = useState('');
     const [activeLink, setActiveLink] = useState('')
     const [confirmed, setConfirmed] = useState('false')
+    const [sidebar, setSidebar] =  useState('hide');
 
     //form 1
     const [firstName, setFirstName] = useState('');
@@ -42,7 +43,8 @@ export default function Utilities(props) {
             tours, setTours, mealPlan, setMealPlan, rooms, setRooms, adults, setAdults, children, setChildren,
             country, setCountry, dateFrom, setDateFrom, dateTo, setDateTo, nights, setNights, step, setStep,
             age, setAge, ticket, setTicket, errorStatus, setErrorStatus, errorMessage, 
-            setErrorMessage, rating, setRating, activeLink, setActiveLink, confirmed, setConfirmed
+            setErrorMessage, rating, setRating, activeLink, setActiveLink, confirmed, setConfirmed,
+            sidebar, setSidebar
         }}
     >
         {props.children}

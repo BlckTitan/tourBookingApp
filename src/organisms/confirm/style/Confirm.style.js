@@ -4,26 +4,15 @@ export const ConfirmStyle = Styled.div`
     width: 100%;
     h1{
         margin: 1.5rem 0;
+        font-size: 1.5vw;
     }
 
     div{
         margin-bottom: 1rem;
     }
 
-    div.date{
-        display: flex;
-        div{
-            margin-right: 1.5rem;
-        }
-    }
-
-    div.accomodation{
-        display: flex;
-        div{
-            margin-right: 1.5rem;
-        }
-    }
-
+    div.date,
+    div.accomodation,
     div.otherInfo{
         display: flex;
         div{
@@ -37,12 +26,12 @@ export const ConfirmStyle = Styled.div`
         margin-top: 1rem;
         button.next,
         button.previous{
-            width: 12rem;
+            width: 12vw;
             height: 3.5rem;
             color: #fff;
             border: 0;
             border-radius: 0.3rem;
-            font-size: 1.2rem;
+            font-size: 1.2vw;
             background-color: #e26329;
         }
         button.next:hover{

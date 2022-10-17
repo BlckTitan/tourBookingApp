@@ -13,23 +13,25 @@ import { StateContext } from '../../utilities/Utilities';
 
 export default function Menu() {
   const location = useLocation();
-  const {activeLink, setActiveLink} = useContext(StateContext)
+  const {activeLink, setActiveLink, sidebar} = useContext(StateContext)
   useEffect(()=>{
     setActiveLink(location.pathname)
   }, [location])
 
   return (
     <Container>
-        <ul>
+        <ul className={`${sidebar}`}>
             <li>
               <Link to="/" className={(activeLink === '/' || activeLink === 'active home') ? 'active home' :  'false'} onClick={()=>{setActiveLink('active home')}}>
-                <HomeIcon className='icon'/>Home
+                <div className='icon'><HomeIcon className='icon'/></div>
+                <span>Home</span>
               </Link>
             </li>
             <li>
               <Link to="/bookings" 
                 className={(activeLink === '/bookings' || activeLink === 'active bookings') ? 'active bookings' :  'false'} onClick={()=>{setActiveLink('active bookings')}}>
-                <BookOnlineIcon className='icon'/>Bookings
+                <div className='icon'><BookOnlineIcon className='icon'/></div>
+                <span>Bookings</span>
               </Link>
             </li>
         </ul>

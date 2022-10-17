@@ -3,13 +3,12 @@ export const ProfileInformationStyle = Styled.div`
     
     input, select, span{
         margin-top: 0.5rem;
-        height: 2.5rem;
         border-radius: 0.3rem;
         border: 0.3px solid #0077a3;
-        padding: 0.5rem;
-        font-size: 1.2rem;
+        padding: 0.5rem 0.5rem;
+        font-size: 1.2vw;
         color: #272726;
-        width: 30rem;
+        width: 30vw;
     }
     div{
         margin-bottom: 1rem;
@@ -34,12 +33,12 @@ export const ProfileInformationStyle = Styled.div`
         justify-content: flex-end;
         margin-top: 2rem;
         button{
-            width: 12rem;
+            width: 12vw;
             height: 3.5rem;
             color: #fff;
             border: 0;
             border-radius: 0.3rem;
-            font-size: 1.2rem;
+            font-size: 1.2vw;
             background-color: #e26329;
         }
         button:hover{

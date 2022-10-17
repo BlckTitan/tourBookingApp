@@ -62,7 +62,7 @@ export const Container = Styled.div`
     div.textOverlay{
         display: flex;
         flex-direction: column;
-        padding: 3.5rem 8rem;
+        padding: 3.5rem 8vw;
         color: #0077a3;
         width: 100%;
         max-height: 30rem;
@@ -71,12 +71,12 @@ export const Container = Styled.div`
         top: 0;
         h1{
             //font-family: 'caveat';
-            font-size: 6rem; 
+            font-size: 5vw; 
             margin-bottom: 1.5rem;
         }
         p{
             font-family: 'kalam';
-            font-size: 4.5rem;
+            font-size: 3vw;
             color: #E26329;
         }
 
@@ -96,13 +96,13 @@ export const Container = Styled.div`
                 justify-content: center;
                 align-items: center;
                 position: fixed;
-                bottom: 6rem;
+                bottom: 3vh;
                 left: 2rem;
                 opacity: 1;
                 a{
                     margin: 0.3rem 0;
                     .icon{
-                        font-size: 2.5rem;
+                        font-size: 2.2vw;
                     }
                     .icon.facebook{
                         color: #35548e;
@@ -120,11 +120,11 @@ export const Container = Styled.div`
             }
             a{
                 button{
-                    width: 12rem;
+                    width: 12vw;
                     height: 3.5rem;
                     border: 0;
                     color: #fff;
-                    font-size: 1.2rem;
+                    font-size: 1.2vw;
                     border-radius: 0.3rem;
                     background-color: #4169e1;
                     animation: btnBounce 4s ease-in-out 1s infinite normal none;

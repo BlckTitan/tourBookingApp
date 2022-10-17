@@ -15,25 +15,45 @@ export const Container = Styled.div`
             width: 15rem;
             height: 3.3rem;
             object-fit: cover;
-        } 
+        }
+        span{
+            display: none;
+        }
     }
-    ul{
-        display:  flex;
-        justify-content: end;
-        width: 60%;
-        li{
-            display: flex;
-            align-items: center;
-            margin-right: 1rem;
-            .icon{
-                margin: .5rem;
+
+    //responsive layout
+    @media (max-width: 1024px){
+        height: 3rem;
+        background-color: #272726;
+        padding: 0 1rem;
+        div.logo{
+            img{
+                width: 12rem;
             }
-            .name{
-                font-size:  1.2rem;
-            }
-            a{
-                color: #e8e8e8;
+            span{
+                display: block;
+                text-align: center;
+                line-height: 0.1rem;
+                padding: 0.1rem;
+                border: 0.1px solid gray;
+                border-radius: 0.3rem;
+                .icon.burger{
+                    color: gray;
+                    font-size: 2.2vw;
+                }
             }
         }
     }
 `;
+/**
+*@media (max-width: 768px){
+
+}
+mobileS: '320px'
+mobileM: '375px'
+mobileL: '425px'
+tablet: '768px'
+laptop: '1024px'
+laptopL: '1440px'
+desktop: '2560px'
+*/

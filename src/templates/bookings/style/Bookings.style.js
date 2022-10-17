@@ -14,12 +14,12 @@ export const Container = Styled.div`
             align-items: center;
             width: 100%;
             & div.errorMessageBox{
-                width: 25rem;
+                width: 25vw;
                 height: auto;
-                padding: 1rem;
-                font-size: 1.2rem;
+                padding: 1vw;
+                font-size: 1.2vw;
                 position: absolute;
-                left: 55rem;
+                left: 48vw;
                 top: 2rem;
                 border-radius: 0.3rem;
                 background-color: #FBCEB1;

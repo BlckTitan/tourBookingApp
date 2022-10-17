@@ -7,7 +7,7 @@ export const TourInformationStyle = Styled.div`
         border-radius: 0.3rem;
         border: 0.3px solid #0077a3;
         padding: 0.5rem;
-        font-size: 1.2rem;
+        font-size: 1vw;
         color: #272726;
     }
     div{
@@ -56,12 +56,12 @@ export const TourInformationStyle = Styled.div`
         margin-top: 2rem;
         button.next,
         button.previous{
-            width: 12rem;
+            width: 12vw;
             height: 3.5rem;
             color: #fff;
             border: 0;
             border-radius: 0.3rem;
-            font-size: 1.2rem;
+            font-size: 1.2vw;
             background-color: #e26329;
         }
         button.next:hover{

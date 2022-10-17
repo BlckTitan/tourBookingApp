@@ -13,4 +13,12 @@ export const Container = Styled.div`
         top: 8rem;
         background-color: #e8e8e8;
     }
+    @media (max-width: 1024px){
+        main{
+            height: calc(100% - 3rem);
+            top: 3rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
 `;
