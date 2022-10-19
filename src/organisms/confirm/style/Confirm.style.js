@@ -86,6 +86,111 @@ export const ConfirmStyle = Styled.div`
                 background-color: #636e71;
             }
         }
+    }
+
+    //responsive styling max-width 768px
+    @media (max-width: 768px){
+       
+        div.name,
+        div.otherInfo{
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.navigation{
+            button.next,
+            button.previous{
+                width: 20vw;
+            }
+        }
+
+    }
+
+    //responsive styling max-width 600px
+    @media (max-width: 600px){
+        h1{
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        div{
+            margin-bottom: 0.5rem;
+        }
+
+        div.date,
+        div.accomodation,
+        div.age,
+        div.statusGender,
+        div.otherInfo,
+        div.name{
+            display: flex;
+            div{
+                margin-right: 1.5rem;
+            }
+        }
+        div.date,
+        div.accomodation,
+        div.age,
+        div.statusGender,
+        div.otherInfo,
+        div.name{
+            display: flex;
+            flex-direction: column;
+            div{
+                margin-right: 1rem;
+            }
+        }
+
+        div.navigation{
+            button.next,
+            button.previous{
+                width: 20vw;
+            }
+        }
+
+    }
+
+    //responsive styling max-width 480px
+    @media (max-width: 480px){
+        h1{
+            text-align: center;
+            font-size: 1.3rem;
+        }
+
+        div{
+            margin-bottom: 0.5rem;
+        }
+
+        div.date,
+        div.accomodation,
+        div.age,
+        div.statusGender,
+        div.otherInfo,
+        div.name{
+            display: flex;
+            div{
+                margin-right: 1.5rem;
+            }
+        }
+        div.date,
+        div.accomodation,
+        div.age,
+        div.statusGender,
+        div.otherInfo,
+        div.name{
+            display: flex;
+            flex-direction: column;
+            div{
+                margin-right: 1rem;
+            }
+        }
+
+        div.navigation{
+            button.next,
+            button.previous{
+                width: 20vw;
+            }
+        }
 
     }
 `;

@@ -104,4 +104,111 @@ export const TourInformationStyle = Styled.div`
             }
         }
     }
+
+    //responsive styling max-width 600px
+    @media (max-width: 600px){
+        select{
+            width: 8rem;
+            font-size: 1rem;
+        }
+
+        input{
+            font-size: 1rem;
+        }
+
+        div{
+            margin-bottom: 0.8rem;
+        }
+
+        & div.country{
+            select{
+                width: 20rem;
+            }
+        }
+
+        & div.duration{
+            display: flex;
+            flex-direction: column;
+            label{
+                margin-top: 0.3rem;
+                span{
+                    height: 2rem;
+                    margin-top: 0.3rem;
+                }
+            }
+        }
+
+        & div.accomodation{
+            display: flex;
+            label{
+              margin-top: 0.3rem;
+              select{
+                width: 4.5rem;
+              }
+              select.rating{
+                width: 6rem;
+              }
+              select.adults,
+              select.rooms{
+                width: 2.5rem;
+              }
+            }
+        }
+
+        div.formNavigation{
+            button.next,
+            button.previous{
+                width: 6rem;
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    //responsive styling max-width 480px
+    @media (max-width: 480px){
+        select{
+            width: 15rem;
+        }
+
+        input{
+            width: 10rem;
+        }
+
+        & div.country{
+            select{
+                width: 15rem;
+            }
+        }
+
+        & div.duration{
+            display: flex;
+            flex-direction: column;
+            label{
+                margin-bottom: 00.3rem;
+                span{
+                    height: 2rem;
+                    margin-top: 0.3rem;
+                }
+            }
+        }
+
+        & div.accomodation,
+        div.tourTransfer{
+            display: flex;
+            flex-direction: column;
+            label{
+              margin-top: 0.3rem;
+            }
+        }
+
+        div.formNavigation{
+            button.next,
+            button.previous{
+                width: 20vw;
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
 `;

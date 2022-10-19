@@ -65,9 +65,9 @@ export default function TourInformation() {
 
          <div className='accomodation'>
 
-          <label>
+            <label>
               Hotel Rating
-              <select onClick={(e) => setRating(e.target.value)}>
+              <select onClick={(e) => setRating(e.target.value)} className='rating'>
                 <option value='3 Star'>3 Star</option>
                 <option value='4 Star'>4 Star</option>
                 <option value='5 Star'>5 Star</option>
@@ -76,7 +76,7 @@ export default function TourInformation() {
 
             <label>
               Rooms
-              <select onClick={(e) => setRooms(e.target.value)}>
+              <select onClick={(e) => setRooms(e.target.value)} className='rooms'>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
@@ -86,7 +86,7 @@ export default function TourInformation() {
 
             <label>
               Adults
-              <select onClick={(e) => setAdults(e.target.value)}>
+              <select onClick={(e) => setAdults(e.target.value)} className='adults'>
                 <option value='1'>1</option>
                 <option value='2'>2</option>
                 <option value='3'>3</option>
