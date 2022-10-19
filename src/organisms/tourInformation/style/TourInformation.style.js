@@ -75,4 +75,33 @@ export const TourInformationStyle = Styled.div`
         }
     
     }
+    
+    //responsive styling max-width 1024px
+    @media (max-width: 1024px){
+        input, select, span{
+            margin-top: 0.3rem;
+            height: 2rem;
+            padding: 0.2rem;
+            font-size: 0.8rem;
+            color: #272726;
+        }
+        div{
+            margin-bottom: 0.8rem;
+        }
+        & div.duration{
+            label{
+                span{
+                    height: 2rem;
+                    margin-top: 0.3rem;
+                }
+            }
+        }
+        div.formNavigation{
+            button.next,
+            button.previous{
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
 `;

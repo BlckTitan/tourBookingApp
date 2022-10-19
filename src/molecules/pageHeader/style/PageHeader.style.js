@@ -39,7 +39,7 @@ export const Container = Styled.div`
                 border-radius: 0.3rem;
                 .icon.burger{
                     color: gray;
-                    font-size: 2.2vw;
+                    font-size: 1.8rem;
                 }
             }
         }

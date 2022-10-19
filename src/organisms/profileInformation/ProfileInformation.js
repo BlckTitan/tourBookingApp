@@ -54,7 +54,7 @@ export default function TourInformation() {
                     <option value='Married'>Married</option>
                 </select>
             </label>
-            <label htmlFor='gender'>Gender
+            <label htmlFor='gender' className='gender'>Gender
                 <select id='gender' 
                     onChange={(e)=>{setGender(e.target.value)}}
                 >

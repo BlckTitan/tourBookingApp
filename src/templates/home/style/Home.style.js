@@ -135,6 +135,106 @@ export const Container = Styled.div`
             }
         }
     }
+
+    //responsive home style max-width 1024px
+    @media (max-width: 1024px){
+       height: Calc(100vh - 3rem);
+       div.textOverlay{
+       top: 5vh;
+            h1{
+                //font-family: 'caveat';
+                font-size: 5rem; 
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            p{
+                font-size: 4.5vw;
+            }
+
+            & div.callToAction{
+                display: flex;
+                justify-content: center;
+                div.socials{
+                    a{
+                        margin: 0.3rem 0;
+                        .icon{
+                            font-size: 2rem;
+                        }
+                        .icon.facebook{
+                            color: #35548e;
+                        }
+                        .icon.instagram{
+                            color: #8134AF;
+                        }
+                        .icon.whatsapp{
+                            color: #4AC958;
+                        }
+                    }
+                    a:hover{
+                        transform: scale(1.5);
+                    }
+                }
+                a{
+                    button{
+                        width: 15rem;
+                        height: 5rem;
+                        font-size: 2rem;
+                    }
+                    button:hover{
+                        background-color: #3454b4;
+                    }
+                }
+            }
+        }
+    }
+
+    //responsive home style max-width 768px
+    @media (max-width: 768px){
+       height: Calc(100vh - 3rem);
+       div.textOverlay{
+            top: 8vh;
+            h1{
+                //font-family: 'caveat';
+                font-size: 3rem; 
+                text-align: center;
+            }
+            p{
+                font-size: 4vw;
+            }
+        }
+
+    }
+    //responsive home style max-width 600px
+    @media (max-width: 600px){
+       height: Calc(100vh - 3rem);
+       div.textOverlay{
+            h1{
+                //font-family: 'caveat';
+                font-size: 2.5rem; 
+                text-align: center;
+            }
+            p{
+                font-size: 4.5vw;
+            }
+
+            & div.callToAction{
+                display: flex;
+                justify-content: center;
+                align-items:  center;
+                a{
+                    button{
+                        width: 7rem;
+                        height: 3rem;
+                        font-size: 0.8rem;
+                    }
+                    button:hover{
+                        background-color: #3454b4;
+                    }
+                }
+            }
+        }
+
+    }
 `;
 
 //backdrop-filter: blur(100px);

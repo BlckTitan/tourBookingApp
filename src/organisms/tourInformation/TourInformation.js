@@ -144,7 +144,7 @@ export default function TourInformation() {
               Airport Transfers
               <select onClick={(e) => setTransfers(e.target.value)} required>
                 <option value='One-way ($75)'>One-way ($75)</option>
-                <option value='Return ($150)'>Return</option>
+                <option value='Return ($150)'>Return ($150)</option>
               </select>
             </label>
             

@@ -11,4 +11,22 @@ export const Form = Styled.form`
     background: rgba(255, 255, 255, .6);
     color: #272726;
     font-size: 1vw;
+    
+    //responsive styling max-width 1024px
+    @media (max-width: 1024px){
+        top: 3rem;
+        padding: 1.5rem 2rem;
+        left: 10.5%;
+        width: 80vw;
+        height: auto;
+        font-size: 1.5vw;
+    }
+    //responsive styling max-width 768px
+    @media (max-width: 768px){
+       font-size: 2vw;
+    }
+    //responsive styling max-width 600px
+    @media (max-width: 600px){
+        font-size: 1rem;
+    }
 `

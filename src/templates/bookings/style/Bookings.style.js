@@ -28,6 +28,24 @@ export const Container = Styled.div`
             }
         }
     }
+
+    //responsive layout
+    @media (max-width: 1024px){
+        & div.formCarousel{
+            & div.form{
+                & div.errorMessageBox{
+                    width: 25vw;
+                    height: auto;
+                    padding: 1vw;
+                    font-size: 1.2vw;
+                    position: absolute;
+                    left: 10.5%;
+                    top: 0.5rem;
+                    border-radius: 0.3rem;
+                }
+            }
+        }
+    }
 `;
 
 //backdrop-filter: blur(100px);

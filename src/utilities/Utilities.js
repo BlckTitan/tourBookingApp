@@ -20,8 +20,8 @@ export default function Utilities(props) {
     const [phoneNumber, setPhoneNumber] = useState('');
 
     //form 2
-    const [transfers, setTransfers] = useState('One-way');
-    const [tours, setTours] = useState('1 - 2 tours');
+    const [transfers, setTransfers] = useState('One-way ($75)');
+    const [tours, setTours] = useState('1 - 2 ($150)');
     const [mealPlan, setMealPlan] = useState('None');
     const [rooms, setRooms] = useState('1');
     const [rating, setRating] = useState('3 Star');

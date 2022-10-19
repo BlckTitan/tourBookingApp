@@ -38,7 +38,9 @@ export default function Bookings() {
           }
         </div>
       </div>
+
       <Footer/>
+      
     </Container>
   )
 }

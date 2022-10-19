@@ -7,7 +7,7 @@ import { StateContext } from '../../utilities/Utilities';
 export default function Confirm() {
     const{firstName, lastName, otherName, status, country, dateFrom, dateTo, result, rooms,
         gender, email, phoneNumber, rating, setStep, adults, children, mealPlan, tours, nights,
-        setConfirmed, transfers, ticket
+        setConfirmed, transfers, ticket, age
     } = useContext(StateContext);
    
     useEffect(()=>{
@@ -18,41 +18,106 @@ export default function Confirm() {
     <ConfirmStyle>
             <h1> Kindly confirm your booking details</h1>
 
+            <div className='name'>
+                <div>
+                    <span>First name :</span> {firstName}
+                </div>
+                <div>
+                    <span>Last name :</span> {lastName}
+                </div>
+                <div>
+                    <span>Other Names :</span> {otherName}
+                </div>
+            </div>
+
+            <div className='statusGender'>
+                <div>
+                    <span>Marital Status :</span> {status}
+                </div>
+                <div>
+                    <span>Gender :</span> {gender}
+                </div>
+            </div>
+
             <div className='personalInfo'>
-                <div>First name : {firstName}</div>
-                <div>Last name : {lastName}</div>
-                <div>Other Names : {otherName}</div>
-                <div>Marital Status : {status}</div>
-                <div>Gender : {gender}</div>
-                <div>Email : {email}</div>
-                <div>Phone number : {phoneNumber}</div>
+                <div>
+                    <span>Email :</span> {email}
+                </div>
+                <div>
+                    <span>Phone number :</span> {phoneNumber}
+                </div>
             </div>
 
             <div className='tourInfo'>
-                <div>Destination : {country}</div>
+                <div>
+                    <span>Destination :</span> {country}
+                </div>
 
                 <div className='date'>
-                    <div>From : {dateFrom}</div> 
-                    <div>To : {dateTo}</div>
-                    <div>Nights : {nights}</div>
+                    <div>
+                        <span>From :</span> {dateFrom}
+                    </div> 
+                    <div>
+                        <span>To :</span> {dateTo}
+                    </div>
+                    <div>
+                        <span>Nights :</span> {nights}
+                    </div>
                 </div>
                 
                 <div className='accomodation'>
-                    <div>Rating : {rating}</div>
-                    <div>Rooms : {rooms}</div>
-                    <div>Adults : {adults}</div>
-                    <div>Children : {children}</div>
+                    <div>
+                        <span>Rating :</span> {rating}
+                    </div>
+                    <div>
+                        <span>Rooms :</span> {rooms}
+                    </div>
+                    <div>
+                        <span>Adults :</span> {adults}
+                    </div>
+                    <div>
+                        <span>Children :</span> {children}
+                    </div>
+                </div>
+                <div className='age'>
+                    {
+                        age.length <= 1 && 
+                            <div>
+                                <span>Age : </span>{age}
+                            </div>
+                    }
+                    {
+                        age.length > 1 && 
+                            <div>
+                                <span>Ages :</span> {age}
+                            </div>
+                    }
                 </div>
                 
-                <div className='otherInfo'>
-                    <div>Board : {mealPlan}</div>
-                    <div>Tours Fares: {tours}</div>
-                    <div>Airport Transfers: {transfers}</div>
-                    <div>Discounted Ticket: {ticket}</div>
+                <div className='mealPlan'>
+                    <div>
+                        <span>Board :</span> {mealPlan}
+                    </div>
                 </div>
+
+                <div className='otherInfo'>
+                    <div>
+                        <span>Tours Fares:</span> {tours}
+                    </div>
+                    <div>
+                        <span>Airport Transfers:</span> {transfers}
+                    </div>
+                </div>
+
+                <div className='ticket'>
+                    <div>
+                        <span>Discounted Ticket:</span> {ticket}
+                    </div>
+                </div>
+
             </div>
             
-         <div className='continue'>
+         <div className='navigation'>
             <button className='previous' onClick={()=>{setStep(1)}}>Go back</button>
             <button className='next' type='submit'
                 onClick={()=>setConfirmed('true')}

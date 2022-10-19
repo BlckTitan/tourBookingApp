@@ -45,4 +45,84 @@ export const ProfileInformationStyle = Styled.div`
             background-color: #b44f20;
         }
     }
+
+    //responsive styling max-width 1024px
+    @media (max-width: 1024px){
+            input, select, span{
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.5rem;
+            font-size: 1rem;
+            width: 25rem;
+        }
+        div.continue{
+            button{
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    //responsive styling max-width 768px
+    @media (max-width: 768px){
+        input, select, span{
+            width: 20rem;
+        }
+        div.continue{
+            button{
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    //responsive styling max-width 600px
+    @media (max-width: 600px){
+        input, select, span{
+            margin-top: 0.2rem;
+            //width: 15rem;
+        }
+
+        div.otherInfo{
+            display: flex;
+            flex-direction: column;
+            label.gender{
+                margin-top: 0.4rem;
+            }
+        }
+
+        div.continue{
+            button{
+                width: 20vw;
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
+    //responsive styling max-width 480px
+    @media (max-width: 480px){
+        input, select, span{
+            width: 60vw;
+            margin-top: 0.2rem;
+        }
+
+        div.otherInfo{
+            display: flex;
+            flex-direction: column;
+            label.gender{
+                margin-top: 0.3rem;
+            }
+        }
+
+        div{
+            input.phoneNumber{
+                width: 60vw;
+            }
+        }
+
+        div.continue{
+            button{
+                width: 25vw;
+                height: 3rem;
+                font-size: 1rem;
+            }
+        }
+    }
 `;
