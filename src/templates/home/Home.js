@@ -36,7 +36,7 @@ export default function Home() {
 
         <audio src={audioFile} autoPlay loop>
           <source src={audioFile} type="audio/mpeg"/>
-          Your browser does not support the audio element.
+          Your browser does not support the audio.
         </audio>
 
       </div>

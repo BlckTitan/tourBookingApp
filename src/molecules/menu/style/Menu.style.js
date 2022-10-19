@@ -41,9 +41,9 @@ export const Container = Styled.div`
     //responsive layout max-width 1024px
     @media (max-width: 1024px){
         //transition-property: width;
-        transition-timing-function: linear;
-        transition-duration: 4s;
-        transition-delay: 1s;
+        //transition-timing-function: linear;
+        //transition-duration: 0.4s;
+        //transition-delay: 1s;
         width: 20vw;
         padding: 0;
         border-top: 0.1px solid gray;
