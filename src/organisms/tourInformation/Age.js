@@ -8,6 +8,17 @@ const AgeChildren = Styled.div`
     select{
         margin-right: 0.5rem;
     }
+    @media (max-width: 600px){
+        label{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            //grid-template-rows: repeat(3, 150px);
+        }
+        select{
+            width: 3rem;
+            margin-right: 0.5rem;
+        }
+    }
 `;
 
 export default function Age() {

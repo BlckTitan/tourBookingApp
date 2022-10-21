@@ -176,35 +176,3 @@ export default function TourInformation() {
     </TourInformationStyle>
   )
 }
-/**
- * const [currentDate, setCurrentDate] = useState('0000-00-00')
-    const date = new Date()
-
-    useEffect(()=>{
-      setErrorStatus('false')
-      setCurrentDate(`${date.getFullYear().toString()}-${date.getMonth().toString()}-${date.getDay().toString()}'`)
-    }, [errorStatus, currentDate])
- */
-
-
-    /**
-     * 
-     * 
-     * <label>
-        Age
-        <select onClick={(e) => setAge(e.target.value)} required>
-          <option value='0+'>0+</option>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-          <option value='6'>6</option>
-          <option value='7'>7</option>
-          <option value='8'>8</option>
-          <option value='9'>9</option>
-          <option value='10'>10</option>
-          <option value='11'>11</option>
-        </select>
-      </label>
-*/

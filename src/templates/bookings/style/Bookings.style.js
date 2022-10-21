@@ -34,14 +34,25 @@ export const Container = Styled.div`
         & div.formCarousel{
             & div.form{
                 & div.errorMessageBox{
-                    width: 25vw;
+                    width: 20rem;
                     height: auto;
-                    padding: 1vw;
-                    font-size: 1.2vw;
+                    padding: 0.5rem;
+                    font-size: 1rem;
                     position: absolute;
                     left: 10.5%;
-                    top: 0.5rem;
+                    top: 0.4rem;
                     border-radius: 0.3rem;
+                }
+            }
+        }
+    }
+
+    //responsive layout
+    @media (max-width: 480px){
+        & div.formCarousel{
+            & div.form{
+                & div.errorMessageBox{
+                    width: 15rem; 
                 }
             }
         }
