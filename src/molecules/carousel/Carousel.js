@@ -6,31 +6,35 @@ import img3 from './img/img5.jpg';
 import {CarouselImg, CarouselCard} from './style/Carousel.style';
 
 export default function Carousel({imageData}) {
-  const [currentImg, setCurrentImg] = useState(0);
+    const [currentImg, setCurrentImg] = useState(0);
+
     useEffect(()=>{
-        setTimeout(carouselSlide, 3000)
-        
+        setTimeout(carouselSlide, 5000)
     })
+
     const carouselSlide = () =>{
         setCurrentImg(currentImg + 1)
         if(currentImg > 2){
             setCurrentImg(0)
         }
     }
+
   return (
     
     <>
-    <CarouselCard>
-        {
-            imageData.map((image, index) => (
-                
-                <CarouselImg key={index} 
-                    src={(index === currentImg) ? image.imgSrc : img3}
-                    alt=''  
-                />
-            ))
-        }
-    </CarouselCard>
+        <CarouselCard>
+            {
+                imageData.map((image, index) => (
+                    
+                    <CarouselImg key={index} 
+                        //src={(index === currentImg) ? image.imgSrc : img3}
+                        src={image.imgSrc}
+                        alt=''  
+                    />
+                ))
+            }
+        </CarouselCard>
     </>
+    
   )
 }

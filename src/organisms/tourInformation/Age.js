@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import Styled from 'styled-components';
 //context
 import { StateContext } from '../../utilities/Utilities';
@@ -23,12 +23,28 @@ const AgeChildren = Styled.div`
 
 export default function Age() {
     const {children, age, setAge} = useContext(StateContext);
+
+    const [firstAge, setFirstAge,] = useState('0')
+    const [secondAge, setSecondAge] = useState('0')
+    const [thirdAge, setThirdAge] = useState('0')
+    const [fourthAge, setFourthAge] = useState('0')
+    const [fifthAge, setFifthAge] = useState('0')
+    const [sixthAge, setSixthAge] = useState('0')
+
+    useEffect(()=>{
+        updateAge()
+    }, [firstAge, secondAge, thirdAge, fourthAge, fifthAge, sixthAge])
   
     const ageNumber = ['0+', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
 
-    const updateAge = (childAge) =>{
+    const updateAge = () =>{
         
-        setAge(age => [...age, childAge]);
+        (children === '1') && setAge([firstAge]);
+        (children === '2') && setAge([firstAge, ',', secondAge]);
+        (children === '3') && setAge([firstAge, ',', secondAge, ',', thirdAge]);
+        (children === '4') && setAge([firstAge, ',', secondAge, ',', thirdAge, ',', fourthAge]);
+        (children === '5') && setAge([firstAge, ',', secondAge, ',', thirdAge, ',', fourthAge, ',', fifthAge]);
+        (children === '6') && setAge([firstAge, ',', secondAge, ',', thirdAge, ',', fourthAge, ',', fifthAge, ',', sixthAge]);
         console.log(age)
     }
 
@@ -38,7 +54,7 @@ export default function Age() {
             //1 child
             (children <= '1') &&
             <label>Age
-            <select onClick={(e) => updateAge(e.target.value)} required>
+            <select onClick={(e) => setFirstAge(e.target.value)} required>
                 <option value='' selected disabled></option>
                 {ageNumber.map((ages, index)=>(
                     <option key={index} value={ages}>{ages}</option>
@@ -51,13 +67,13 @@ export default function Age() {
             (children === '2') &&
             <label>Ages
                 <div className='select'>
-                    <select name='sel' onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFirstAge(e.target.value)} required>
                         <option value='' selected disabled></option>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setSecondAge(e.target.value)} required>
                         <option value='' selected disabled></option>
                         {ageNumber.map((ages, index)=>(
                             <option on key={index} value={ages}>{ages}</option>
@@ -72,17 +88,17 @@ export default function Age() {
             (children === '3') &&
             <label> Ages
                 <div className='select'>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFirstAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setSecondAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setThirdAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
@@ -96,22 +112,22 @@ export default function Age() {
             (children === '4') &&
             <label>Ages
                 <div className='select'>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFirstAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setSecondAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setThirdAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFourthAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
@@ -125,27 +141,27 @@ export default function Age() {
             (children === '5') && 
             <label>Ages
                 <div className='select'>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFirstAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setSecondAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setThirdAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFourthAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFifthAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
@@ -159,32 +175,32 @@ export default function Age() {
             (children === '6') &&
             <label>Ages
                 <div className='select'>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFirstAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setSecondAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setThirdAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFourthAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setFifthAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
-                    <select onClick={(e) => updateAge(e.target.value)} required>
+                    <select onClick={(e) => setSixthAge(e.target.value)} required>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}

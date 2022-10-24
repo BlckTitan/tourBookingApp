@@ -5,9 +5,11 @@ import img3 from '../molecules/carousel/img/img3.jpg';
 import img5 from '../molecules/carousel/img/img5.jpg';
 
 export const images = [
+
     {id: 1, imgSrc: img1},
     {id: 2, imgSrc: img3},
-    {id: 3, imgSrc: img5},
+    {id: 3, imgSrc: img5}
+    
 ];
 export const location = [
     
@@ -18,9 +20,11 @@ export const location = [
     {id: 5, country: "Rawanda (Kigali)", rating: "4-star"},
     {id: 6, country: "Seychelles", rating: "3-star"},
     {id: 7, country: "Tanzania (Zanzibar)", rating: "4-star"}
+
 ];
 
 export const meal = [
+
     {id: 1, type: "Room only"},
     {id: 2, type: "Bed and Breakfast"},
     {id: 3, type: "Half Board"},

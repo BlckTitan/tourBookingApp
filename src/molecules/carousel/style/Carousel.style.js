@@ -12,5 +12,5 @@ export const CarouselImg = Styled.img`
     background-repeat: no-repeat;
     background-attachment: scroll;
     position: absolute;
-    transition: all 0.4s 0s ease-in-out;
+    //transition: all 0.4s 0s ease-in-out;
 `;

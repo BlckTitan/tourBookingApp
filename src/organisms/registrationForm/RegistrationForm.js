@@ -45,7 +45,7 @@ export default function RegistrationForm() {
 
         const config = {
           SecureToken : "b623a7bc-abfe-4f39-9aff-a5d8070b92b3",
-          To : 'info@worldlinkbesttravels.com',
+          To : 'ugorjivictoreze@gmail.com',
           From : `${formState.email}`,
           Subject : `NEW TOUR BOOKING REQUEST`,
           Body : `
@@ -99,3 +99,4 @@ export default function RegistrationForm() {
     </>
   )
 }
+//'info@worldlinkbesttravels.com',
