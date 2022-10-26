@@ -3,6 +3,7 @@ import React, { createContext, useState} from 'react';
 export const StateContext = createContext();
 
 export default function Utilities(props) {
+
     const [step, setStep] = useState(0)
     const [errorStatus, setErrorStatus] = useState('false');
     const [errorMessage, setErrorMessage] = useState('');
@@ -13,7 +14,7 @@ export default function Utilities(props) {
     //form 1
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
-    const [otherName, setOtherName] = useState('');
+    const [otherName, setOtherName] = useState('None');
     const [status, setStatus] = useState('Single');
     const [gender, setGender] = useState('Male');
     const [email, setEmail] = useState('');
@@ -22,7 +23,7 @@ export default function Utilities(props) {
     //form 2
     const [transfers, setTransfers] = useState('One-way ($75)');
     const [tours, setTours] = useState('1 - 2 ($150)');
-    const [mealPlan, setMealPlan] = useState('None');
+    const [mealPlan, setMealPlan] = useState('Room Only');
     const [rooms, setRooms] = useState('1');
     const [rating, setRating] = useState('3 Star');
     const [adults, setAdults] = useState('1');

@@ -4,10 +4,12 @@ import Styled from "styled-components";
 export const Container = Styled.div`
     width: 100%;
     height: 100%;
+    background-color: #d8eff7;
     & div.formCarousel{
         position: relative;
         width: 100%;
         height: 45rem;
+        background-color: #d8eff7;
         & div.form{
             display: flex;
             justify-content: start;

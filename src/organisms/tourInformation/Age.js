@@ -24,7 +24,7 @@ const AgeChildren = Styled.div`
 export default function Age() {
     const {children, age, setAge} = useContext(StateContext);
 
-    const [firstAge, setFirstAge,] = useState('0')
+    const [firstAge, setFirstAge] = useState('0')
     const [secondAge, setSecondAge] = useState('0')
     const [thirdAge, setThirdAge] = useState('0')
     const [fourthAge, setFourthAge] = useState('0')
@@ -39,12 +39,7 @@ export default function Age() {
 
     const updateAge = () =>{
         
-        (children === '1') && setAge([firstAge]);
-        (children === '2') && setAge([firstAge, ',', secondAge]);
-        (children === '3') && setAge([firstAge, ',', secondAge, ',', thirdAge]);
-        (children === '4') && setAge([firstAge, ',', secondAge, ',', thirdAge, ',', fourthAge]);
-        (children === '5') && setAge([firstAge, ',', secondAge, ',', thirdAge, ',', fourthAge, ',', fifthAge]);
-        (children === '6') && setAge([firstAge, ',', secondAge, ',', thirdAge, ',', fourthAge, ',', fifthAge, ',', sixthAge]);
+        setAge([firstAge, secondAge, thirdAge, fourthAge, fifthAge, sixthAge]);
         console.log(age)
     }
 
@@ -55,7 +50,6 @@ export default function Age() {
             (children <= '1') &&
             <label>Age
             <select onClick={(e) => setFirstAge(e.target.value)} required>
-                <option value='' selected disabled></option>
                 {ageNumber.map((ages, index)=>(
                     <option key={index} value={ages}>{ages}</option>
                     ))}
@@ -68,13 +62,11 @@ export default function Age() {
             <label>Ages
                 <div className='select'>
                     <select onClick={(e) => setFirstAge(e.target.value)} required>
-                        <option value='' selected disabled></option>
                         {ageNumber.map((ages, index)=>(
                             <option key={index} value={ages}>{ages}</option>
                         ))}
                     </select>
                     <select onClick={(e) => setSecondAge(e.target.value)} required>
-                        <option value='' selected disabled></option>
                         {ageNumber.map((ages, index)=>(
                             <option on key={index} value={ages}>{ages}</option>
                         ))}

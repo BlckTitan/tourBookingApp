@@ -32,8 +32,8 @@ export default function TourInformation() {
           </div>
 
           <div className='otherNames'>
-            <label htmlFor='otherNames'>Other Name
-                <input type="text" id='otherNames' value={otherName} required 
+            <label htmlFor='otherNames'>Other Name (Optional)
+                <input type="text" id='otherNames' value={otherName} 
                 onChange={(e)=>{setOtherName(e.target.value)}} placeholder='Clark'/>
             </label>
          </div>
@@ -73,8 +73,8 @@ export default function TourInformation() {
 
          <div className='phoneNumber'>
             <label htmlFor='phoneNumber'>Phone number (WhatsApp)
-                <input type="tel" className="phoneNumber" id='phoneNumber' value={phoneNumber} required 
-                onChange={(e)=>{setPhoneNumber(e.target.value)}} placeholder='+ 234 813 000 0009'/>
+                <input type="tel" pattern="+[2-4]{3}[0-9]{3}[0-9]{3}[0-9]{4}" className="phoneNumber" id='phoneNumber' value={phoneNumber} required 
+                onChange={(e)=>{setPhoneNumber(e.target.value)}} placeholder='+2348130000009'/>
             </label>
          </div>
 

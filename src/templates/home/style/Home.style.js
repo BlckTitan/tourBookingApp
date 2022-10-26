@@ -49,6 +49,7 @@ export const Container = Styled.div`
     }
     width: 100%;
     height: Calc(100vh - 8rem);
+    background-color: #bcebdd;
     div.videoBg{
         width: 100%;
         height: 100%;

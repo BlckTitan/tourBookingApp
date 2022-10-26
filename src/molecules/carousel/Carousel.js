@@ -9,7 +9,7 @@ export default function Carousel({imageData}) {
     const [currentImg, setCurrentImg] = useState(0);
 
     useEffect(()=>{
-        setTimeout(carouselSlide, 5000)
+        setTimeout(carouselSlide, 60000)
     })
 
     const carouselSlide = () =>{
@@ -28,12 +28,12 @@ export default function Carousel({imageData}) {
                     
                     <CarouselImg key={index} 
                         //src={(index === currentImg) ? image.imgSrc : img3}
-                        src={image.imgSrc}
+                        src={(index === currentImg) && image.imgSrc}
                         alt=''  
                     />
                 ))
             }
-        </CarouselCard>
+        </CarouselCard> 
     </>
     
   )

@@ -12,32 +12,17 @@ export default function Validation(props) {
  }
 
   const validateProfile = () =>{
+
     let emptyField = '';
-    let inputField = false;
-    switch ( emptyField || inputField) {
+    
+    switch ( emptyField) {
 
         case props.fields.firstName:
             setErrorMessage('First name cannot be blank')  
             setErrorStatus('true')
         break;
-        case isNaN(props.fields.firstName):
-            setErrorMessage('First name cannot be a number')  
-            setErrorStatus('true')
-        break;
-        case props.fields.otherName:
-            setErrorMessage('Other name cannot be blank') 
-            setErrorStatus('true')
-        break;
-        case isNaN(props.fields.otherName):
-            setErrorMessage('Other name cannot be a number') 
-            setErrorStatus('true')
-        break;
         case props.fields.lastName:
             setErrorMessage('Last name cannot be blank') 
-            setErrorStatus('true')
-        break;
-        case isNaN(props.fields.lastName):
-            setErrorMessage('Last name cannot be a number') 
             setErrorStatus('true')
         break;
         case props.fields.email:
@@ -45,8 +30,41 @@ export default function Validation(props) {
             setErrorMessage('Email cannot be blank')
         break;
         case props.fields.phoneNumber:
-            setErrorStatus(true)
+            setErrorStatus('true')
             setErrorMessage('Phone number cannot be blank')
+        break;
+        default:
+            setErrorStatus('false')
+            validateProfileNum()
+        break;
+    }
+  }
+
+  const validateProfileNum = () =>{
+    
+    let inputField = false;
+
+    switch (inputField) {
+
+        case isNaN(props.fields.firstName):
+            setErrorMessage('First name cannot be a number')  
+            setErrorStatus('true')
+        break;
+        case isNaN(props.fields.otherName):
+            setErrorMessage('Other name cannot be a number') 
+            setErrorStatus('true')
+        break;
+        case isNaN(props.fields.lastName):
+            setErrorMessage('Last name cannot be a number') 
+            setErrorStatus('true')
+        break;
+        case isNaN(props.fields.email):
+            setErrorStatus('true')
+            setErrorMessage('Email cannot be a number')
+        break;
+        case !isNaN(props.fields.phoneNumber):
+            setErrorStatus('true')
+            setErrorMessage('Phone number cannot be a text')
         break;
         default:
             setErrorStatus('false')
@@ -54,6 +72,7 @@ export default function Validation(props) {
         break;
     }
   }
+
 
   //validating tour
   const validateTour = () =>{

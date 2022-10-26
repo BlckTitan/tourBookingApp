@@ -82,36 +82,44 @@ export default function Confirm() {
                 <div className='age'>
                     {
                         age.length <= 1 && 
-                            <div>
-                                <span>Age : </span>{age}
-                            </div>
+                        <div>
+                            <span>Age : </span>{age}
+                        </div>
                     }
                     {
                         age.length > 1 && 
-                            <div>
-                                <span>Ages :</span> {age}
-                            </div>
+                        <div>
+                            <span>Ages : </span>
+                            {
+                                `${(age[0] !== '0') ? age[0]+',' : ''} 
+                                ${(age[1] !== '0') ? age[1]+',' : ''} 
+                                ${(age[2] !== '0') ? age[2]+',' : ''}
+                                ${(age[3] !== '0') ? age[3]+',' : ''} 
+                                ${(age[4] !== '0') ? age[4]+',' : ''} 
+                                ${(age[5] !== '0') ? age[5]+',' : ''}`
+                            }
+                        </div>
                     }
                 </div>
                 
                 <div className='mealPlan'>
                     <div>
-                        <span>Board :</span> {mealPlan}
+                        <span>Board : </span> {mealPlan}
                     </div>
                 </div>
 
                 <div className='otherInfo'>
                     <div>
-                        <span>Tours Fares:</span> {tours}
+                        <span>Tours Fares :</span> {tours}
                     </div>
                     <div>
-                        <span>Airport Transfers:</span> {transfers}
+                        <span>Airport Transfers :</span> {transfers}
                     </div>
                 </div>
 
                 <div className='ticket'>
                     <div>
-                        <span>Discounted Ticket:</span> {ticket}
+                        <span>Discounted Ticket : </span> {ticket}
                     </div>
                 </div>
 
