@@ -45,7 +45,7 @@ export default function RegistrationForm() {
 
         const config = {
           SecureToken : "b623a7bc-abfe-4f39-9aff-a5d8070b92b3",
-          To : 'info@worldlinkbesttravels.com',
+          To : 'dorshman406@gmail.com',
           From : `${formState.email}`,
           Subject : `NEW TOUR BOOKING REQUEST`,
           Body : `
@@ -88,15 +88,6 @@ export default function RegistrationForm() {
             { (step === 2 && errorStatus === 'false') && <Confirm/> }
             { (step === 3 && confirmed === 'false') && <Success/> }
         </Form>
-        {
-            console.log(
-                firstName, lastName, otherName, status, gender, email, phoneNumber,
-                country, dateFrom, dateTo, nights, rooms, rating, adults, children, transfers, tours, 
-                mealPlan, ticket, age,
-                errorMessage, step,  errorStatus, confirmed
-            )
-        }
     </>
   )
 }
-//'info@worldlinkbesttravels.com',
