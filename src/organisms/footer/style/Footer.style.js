@@ -19,7 +19,15 @@ export const FooterStyle = Styled.div`
             width: 25rem;
             height: 5rem;
             object-fit: cover;
-        } 
+        }
+        span.logo_text{
+            display: inline-block;
+            color: #fff;
+            font-size: 4.5rem;
+            font-weight: 600;
+            margin-left: 1rem;
+            border: none;
+        }
     }
     div.otherInfo{
         display: flex;

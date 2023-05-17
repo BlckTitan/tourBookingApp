@@ -52,13 +52,13 @@ export default function Home() {
       <div className='callToAction'>
 
           <div className='socials'>
-              <a target="blank" href="https://instagram.com/worldlinkbesttravelsandtours">
+              <a target="blank" href="/#">
                 <InstagramIcon className='icon instagram'/>
               </a>
-              <a target="blank" href="https://www.facebook.com/worldlinkbesttravelandtours">
+              <a target="blank" href="/#">
                 <FacebookOutlinedIcon className='icon facebook'/>
               </a>
-              <a target="blank" href="https://wa.me/message/KYRAGWC3FD6ND1">
+              <a target="blank" href="/#">
                 <WhatsAppIcon className='icon whatsapp'/>
               </a>
           </div>
