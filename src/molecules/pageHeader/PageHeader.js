@@ -4,7 +4,7 @@ import { Container } from './style/PageHeader.style';
 //icon
 import MenuIcon from '@mui/icons-material/Menu';
 //logo
-import logo from '../../data/logo/LOGO-WLBT.png'
+//import logo from '../../data/logo/LOGO-WLBT.png'
 import { StateContext } from '../../utilities/Utilities';
 export default function PageHeader() {
 
