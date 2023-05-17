@@ -19,6 +19,14 @@ export const Container = Styled.div`
         span{
             display: none;
         }
+        span.logo_text{
+            display: inline-block;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-left: 1rem;
+            border: none;
+        }
     }
 
     //responsive layout
@@ -41,6 +49,10 @@ export const Container = Styled.div`
                     color: gray;
                     font-size: 1.8rem;
                 }
+            }
+            span.logo_text{
+                display: inline-block;
+                margin-left: 2.5rem !important;
             }
         }
     }

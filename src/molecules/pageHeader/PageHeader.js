@@ -15,9 +15,11 @@ export default function PageHeader() {
         <div className='logo'>
           <span onClick={
             (sidebar === 'hide') ? ()=>setSidebar('show') : ()=>setSidebar('hide')
-            }><MenuIcon className='icon burger'/></span>
+            }>
+              <MenuIcon className='icon burger'/>
+          </span>
           <Link to="/" className='text logo'>
-            <img src={logo} alt=''/>
+            <span className='logo_text'>WLBT</span>
           </Link>
         </div>
     </Container>
