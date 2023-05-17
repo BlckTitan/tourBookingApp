@@ -29,7 +29,7 @@ export default function Footer() {
                 </a>
             </div>
             <div className='info'>
-                <p>
+                <p className='address'>
                   Ikeja, Lagos, Nigeria.
                 </p>
             </div>
